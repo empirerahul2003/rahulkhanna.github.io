@@ -76,19 +76,21 @@
 
 html[data-theme="dark"] {
   color-scheme: dark;
-  --global-bg-color: #1f2328;
-  --global-code-bg-color: #2b313a;
-  --global-text-color: #c9d1d9;
-  --global-text-color-light: #9ba3af;
-  --global-theme-color: #7aa2f7;
-  --global-hover-color: #7aa2f7;
+  /* Neutral sheet gray ~ RGB(76,76,76) / #4C4C4C */
+  --global-bg-color: #4c4c4c;
+  --global-code-bg-color: #3d3d3d;
+  --global-text-color: #eeeeee;
+  --global-text-color-light: #b8b8b8;
+  --global-theme-color: #9ec5ff;
+  --global-hover-color: #b8d4ff;
   --global-hover-text-color: #{v.$white-color};
-  --global-footer-bg-color: #262b33;
-  --global-footer-text-color: #c9d1d9;
-  --global-footer-link-color: #c9d1d9;
-  --global-distill-app-color: #9ba3af;
-  --global-divider-color: #30363d;
-  --global-card-bg-color: #262c36;
+  --global-footer-bg-color: #454545;
+  --global-footer-text-color: #e0e0e0;
+  --global-footer-link-color: #e0e0e0;
+  --global-distill-app-color: #b8b8b8;
+  --global-divider-color: #666666;
+  /* Slightly lighter panels so they read off the page gray */
+  --global-card-bg-color: #575757;
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$white-color, "red", v.$space: rgb)},
     #{color.channel(v.$white-color, "green", v.$space: rgb)},
