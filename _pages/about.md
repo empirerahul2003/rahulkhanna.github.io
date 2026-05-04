@@ -25,8 +25,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I completed my Master’s in Physics from the Central University of Himachal Pradesh, Dharamshala, in 2025 where my thesis focused on inverse potential construction for neutron–proton scattering under Professor O.S.K.S. Sastri.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My interests lie broadly in quantum computing, quantum information science, and computational physics. I also explore areas such as geometric algebra and Phsyincs informed machine learning.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I enjoy working onphysical systems while also figuring out how to simulate or learn them. I mostly work with Python and numerical methods, and I’m moving toward combining physics with modern machine learning approaches to develop modern computation models.
