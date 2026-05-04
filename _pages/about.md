@@ -25,7 +25,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I completed my Master’s in Physics from the Central University of Himachal Pradesh, Dharamshala, in 2025 where my thesis focused on inverse potential construction for neutron–proton scattering under Professor O.S.K.S. Sastri.
+I completed my Master’s in Physics from the <a href="https://www.cuhimachal.ac.in/" target="_blank" style="color: #7bb3c9; font-weight: 600;">Central University of Himachal Pradesh, Dharamshala</a>, in 2025 where my thesis focused on inverse potential construction for neutron–proton scattering under Professor O.S.K.S. Sastri.
 
 My interests lie broadly in quantum computing, quantum information science, and computational physics. I also explore areas such as geometric algebra and Phsyincs informed machine learning.
 
