@@ -76,19 +76,19 @@
 
 html[data-theme="dark"] {
   color-scheme: dark;
-  --global-bg-color: #{v.$grey-color-dark};
-  --global-code-bg-color: #{v.$code-bg-color-dark};
-  --global-text-color: #{v.$grey-color-light};
-  --global-text-color-light: #{v.$grey-color};
-  --global-theme-color: #{v.$cyan-color};
-  --global-hover-color: #{v.$cyan-color};
+  --global-bg-color: #1f2328;
+  --global-code-bg-color: #2b313a;
+  --global-text-color: #c9d1d9;
+  --global-text-color-light: #9ba3af;
+  --global-theme-color: #7aa2f7;
+  --global-hover-color: #7aa2f7;
   --global-hover-text-color: #{v.$white-color};
-  --global-footer-bg-color: #{v.$grey-color-light};
-  --global-footer-text-color: #{v.$grey-color-dark};
-  --global-footer-link-color: #{v.$black-color};
-  --global-distill-app-color: #{v.$grey-color-light};
-  --global-divider-color: #424246;
-  --global-card-bg-color: #{v.$grey-900};
+  --global-footer-bg-color: #262b33;
+  --global-footer-text-color: #c9d1d9;
+  --global-footer-link-color: #c9d1d9;
+  --global-distill-app-color: #9ba3af;
+  --global-divider-color: #30363d;
+  --global-card-bg-color: #262c36;
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$white-color, "red", v.$space: rgb)},
     #{color.channel(v.$white-color, "green", v.$space: rgb)},
