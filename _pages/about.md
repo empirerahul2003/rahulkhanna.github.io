@@ -3,11 +3,12 @@ layout: about
 title: about
 permalink: /
 subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+header_align: right
 
 profile:
   align: left
   image: prof_pic.jpg
-  image_circular: true # crops the image to make it circular
+  image_circular: false
   more_info: >
     <p>Dalhousie, Himachal Pradesh, India</p>
 
