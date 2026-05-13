@@ -1,217 +1,494 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://empirerahul2003.github.io/rahulkhanna.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://empirerahul2003.github.io/rahulkhanna.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-05-13T16:42:10+00:00</updated><id>https://empirerahul2003.github.io/rahulkhanna.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">Magic Of Fourier Series</title><link href="https://empirerahul2003.github.io/rahulkhanna.github.io/blog/2026/magic-of-fourier-series/" rel="alternate" type="text/html" title="Magic Of Fourier Series"/><published>2026-05-13T00:00:00+00:00</published><updated>2026-05-13T00:00:00+00:00</updated><id>https://empirerahul2003.github.io/rahulkhanna.github.io/blog/2026/magic-of-fourier-series</id><content type="html" xml:base="https://empirerahul2003.github.io/rahulkhanna.github.io/blog/2026/magic-of-fourier-series/"><![CDATA[<h1 id="google--distill-style-rewrite-for-fourier-article">Google × Distill Style Rewrite for Fourier Article</h1> <p>I rewrote the structure for a <strong>Google-blog visual storytelling style</strong> with <strong>Distill-like interactive figures</strong>.</p> <p>Your current article is mathematically strong, but it reads like a textbook. The new structure removes long exposition and shifts to:</p> <p><strong>idea → visual → insight → interaction</strong></p> <p>Based on your uploaded draft fileciteturn0file0L1-L118, the dense sections should be replaced with the following flow.</p> <div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
-<span class="na">layout</span><span class="pi">:</span> <span class="s">distill</span>
-<span class="na">title</span><span class="pi">:</span> <span class="s">The magic of Fourier series</span>
-<span class="na">description</span><span class="pi">:</span> <span class="pi">&gt;</span>
-  <span class="s">How waves, interference, and harmonics combine to explain</span>
-  <span class="s">the mathematics of Fourier series.</span>
-<span class="na">tags</span><span class="pi">:</span> <span class="s">fourier-analysis signal-processing physics math</span>
-<span class="na">date</span><span class="pi">:</span> <span class="s">2026-05-13</span>
-<span class="na">featured</span><span class="pi">:</span> <span class="kc">true</span>
-<span class="na">giscus_comments</span><span class="pi">:</span> <span class="kc">false</span>
-<span class="na">related_posts</span><span class="pi">:</span> <span class="kc">false</span>
-<span class="nn">---</span>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://empirerahul2003.github.io/rahulkhanna.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://empirerahul2003.github.io/rahulkhanna.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-05-13T17:12:05+00:00</updated><id>https://empirerahul2003.github.io/rahulkhanna.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">Magic Of Fourier Series</title><link href="https://empirerahul2003.github.io/rahulkhanna.github.io/blog/2026/magic-of-fourier-series/" rel="alternate" type="text/html" title="Magic Of Fourier Series"/><published>2026-05-13T00:00:00+00:00</published><updated>2026-05-13T00:00:00+00:00</updated><id>https://empirerahul2003.github.io/rahulkhanna.github.io/blog/2026/magic-of-fourier-series</id><content type="html" xml:base="https://empirerahul2003.github.io/rahulkhanna.github.io/blog/2026/magic-of-fourier-series/"><![CDATA[<pre><code class="language-mdx">layout: distill
+title: The magic of Fourier series
+description: &gt;
+  How waves, interference, and harmonics combine to explain
+  the mathematics of Fourier series.
+tags: fourier-analysis signal-processing physics math
+date: 2026-05-13
+featured: true
+giscus_comments: false
+related_posts: false
 
-<span class="gh"># The magic of Fourier series</span>
+# The magic of Fourier series
 
-<span class="gu">## How waves, interference, and harmonics explain complicated motion.</span>
+## How waves, interference, and harmonics explain complicated motion.
 
 Suppose you pluck a guitar string.
 
 Something strange happens.
 
 A messy shape appears.
+
 It vibrates.
+
 It changes.
 
-Yet beneath the complexity, nature is doing something surprisingly simple:
-<span class="gt">
-&gt; every complicated vibration can be built from simpler waves.</span>
+And yet, beneath the complexity, nature is doing something surprisingly simple.
 
-This is the central idea behind Fourier series.
+&gt; complicated motion can emerge from simple waves.
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hero-note"</span><span class="nt">&gt;</span>
-Move the sliders. Break the wave. Rebuild it.
-The mathematics emerges visually.
-<span class="nt">&lt;/div&gt;</span>
+Fourier series is the mathematical language behind that idea.
 
-<span class="nt">&lt;TravelingWaveFigure</span> <span class="nt">/&gt;</span>
-<span class="p">
+But before we talk about Fourier, we must first understand something deeper:
+
+&gt; how waves behave.
+
 ---
-</span>
-<span class="gu">## A wave that travels</span>
 
-A traveling wave moves.
+## A wave that travels
 
-Its shape survives.
+Imagine flicking a rope.
+
+A bump appears.
+
+Then it moves.
+
+Not randomly.
+
+Not chaotically.
+
+The shape survives.
+
 Only its position changes.
 
-Instead of thinking:
-<span class="gt">
-&gt; “the wave changes shape”</span>
+This is a **traveling wave**.
 
-think:
-<span class="gt">
-&gt; “the same shape is moving through space.”</span>
+&lt;div class="distill-figure"&gt;
+  &lt;div id="traveling-wave"&gt;&lt;/div&gt;
+&lt;/div&gt;
 
-<span class="nt">&lt;TravelingWaveFigure</span> <span class="nt">/&gt;</span>
+At first glance, this motion feels obvious.
 
-$$
-u(x,t)=A<span class="se">\s</span>in(kx-<span class="se">\o</span>mega t)$$
+But something subtle is happening.
 
-Try changing:
-<span class="p">
--</span> amplitude
-<span class="p">-</span> wavelength
-<span class="p">-</span> oscillation speed
-
-Notice what stays constant:
-<span class="gt">
-&gt; the profile itself.</span>
-
-This idea seems simple.
-
-But it sets up one of the deepest ideas in mathematical physics.
-
-What happens when waves move in opposite directions?
-<span class="p">
----
-</span>
-<span class="gu">## When motion freezes</span>
-
-Now fix both ends of the string.
-
-Waves reflect.
-They collide.
-
-Something unexpected appears.
-
-The pattern stops moving.
+The wave is not reinventing itself every instant.
 
 Instead:
-<span class="gt">
-&gt; it oscillates in place.</span>
 
-Some points never move at all.
+&gt; the same shape is simply moving through space.
 
-These are called <span class="gs">**nodes**</span>.
-
-<span class="nt">&lt;StandingWaveFigure</span> <span class="nt">/&gt;</span>
+Mathematically, we describe this as
 
 $$
-u(x,t)=A<span class="se">\s</span>in(kx)<span class="se">\c</span>os(<span class="se">\o</span>mega t)$$
+u(x,t)=A\sin(kx-\omega t)
+$$
 
-Notice something subtle.
+Here:
 
-The equation separates naturally:
-<span class="p">
--</span> one part describes <span class="gs">**shape in space**</span>
-<span class="p">-</span> one part describes <span class="gs">**motion in time**</span>
+- \(A\) controls amplitude
+- \(k\) controls wavelength
+- \(\omega\) controls oscillation speed
 
-That separation becomes enormously important later in physics.
+Try changing the parameters.
 
-But standing waves are not fundamental.
+Notice something important:
+
+&gt; the profile itself never changes.
+
+Only its position shifts.
+
+The mathematics is hiding a beautiful idea:
+
+motion can sometimes be represented as a **translation of shape**.
+
+But what happens when waves move in opposite directions?
+
+---
+
+## When motion freezes
+
+Now imagine a string fixed at both ends.
+
+You pluck it.
+
+The wave moves.
+
+It reflects.
+
+It travels back.
+
+Soon, something unexpected happens.
+
+The motion seems to stop.
+
+Not completely.
+
+But strangely.
+
+The shape no longer travels.
+
+Instead:
+
+&gt; it oscillates in place.
+
+This is called a **standing wave**.
+
+&lt;StandingWaveFigure /&gt;
+
+Look carefully.
+
+Some points never move.
+
+These are called **nodes**.
+
+Others move dramatically.
+
+These are **antinodes**.
+
+Unlike traveling waves:
+
+&gt; the shape stays fixed.
+
+Only its amplitude changes with time.
+
+The mathematics becomes
+
+$$
+u(x,t)=A\sin(kx)\cos(\omega t)
+$$
+
+Something remarkable has happened.
+
+The equation naturally separates:
+
+- one part controls **space**
+- one part controls **time**
+
+This is one of the first glimpses of a profound mathematical idea:
+
+&gt; separation of variables.
+
+It appears everywhere in physics:
+
+- quantum mechanics
+- heat conduction
+- electromagnetism
+- acoustics
+
+But standing waves themselves are not fundamental.
 
 They emerge from something simpler.
-<span class="p">
+
 ---
-</span>
-<span class="gu">## The hidden mechanism: interference</span>
 
-A standing wave looks mysterious.
+## The hidden mechanism: interference
 
-Why should a wave stay frozen?
+Standing waves feel mysterious.
 
-The answer is surprisingly beautiful.
+Why should motion freeze?
+
+The answer is interference.
 
 Take:
-<span class="p">
--</span> one wave moving right
-<span class="p">-</span> one wave moving left
+
+- one wave moving right
+- one wave moving left
 
 Add them together.
 
-<span class="nt">&lt;InterferenceFigure</span> <span class="nt">/&gt;</span>
+&lt;InterferenceFigure /&gt;
 
 Suddenly the mystery disappears.
 
-A standing wave is simply:
-<span class="gt">
-&gt; interference.</span>
+A standing wave is not a new kind of wave.
+
+It is simply:
+
+&gt; two traveling waves interfering.
+
+Mathematically:
 
 $$
-<span class="se">\s</span>in(kx-<span class="se">\o</span>mega t)+<span class="se">\s</span>in(kx+<span class="se">\o</span>mega t)
+\sin(kx-\omega t)
++
+\sin(kx+\omega t)
 =
-2<span class="se">\s</span>in(kx)<span class="se">\c</span>os(<span class="se">\o</span>mega t)
+2\sin(kx)\cos(\omega t)
 $$
 
-Nodes appear because destructive interference permanently cancels motion at fixed points.
+This identity explains everything.
+
+Nodes appear because:
+
+&gt; destructive interference permanently cancels motion at fixed points.
+
+Antinodes appear because:
+
+&gt; constructive interference amplifies oscillation.
 
 This is why:
-<span class="p">
--</span> guitar strings resonate
-<span class="p">-</span> violin harmonics emerge
-<span class="p">-</span> resonant cavities work
 
-But real vibrations are messy.
+- guitar strings resonate
+- violin harmonics appear
+- organ pipes sing
+- resonant cavities exist
 
-A plucked string does not look like a clean sine wave.
+But a real plucked string is messy.
 
-So how does nature describe arbitrary shapes?
-<span class="p">
+Its shape is not a perfect sine wave.
+
+So how does nature handle complicated vibrations?
+
 ---
-</span>
-<span class="gu">## Fourier’s astonishing insight</span>
+
+## Fourier’s astonishing idea
 
 Imagine plucking a string into an ugly shape.
 
-Sharp edges.
+Sharp bends.
+
 Asymmetry.
-Irregular motion.
 
-Fourier’s radical proposal was:
-<span class="gt">
-&gt; even complicated shapes can be written as sums of simple standing waves.</span>
+Complex motion.
 
-<span class="nt">&lt;FourierDecompositionFigure</span> <span class="nt">/&gt;</span>
+Nothing like a simple sine wave.
 
-Each harmonic vibrates independently.
+And yet nature evolves it perfectly.
+
+How?
+
+Fourier proposed something radical:
+
+&gt; any reasonable shape can be built from simple standing-wave modes.
+
+That claim changed mathematics forever.
+
+&lt;FourierDecompositionFigure /&gt;
+
+Move the slider.
+
+Add more modes.
+
+Watch complexity emerge from simplicity.
+
+Each oscillation contributes something small.
 
 Together:
-<span class="gt">
-&gt; they reconstruct complexity.</span>
+
+&gt; they reconstruct the original shape.
+
+Mathematically:
 
 $$
-f(x)=<span class="se">\s</span>um_{n=1}^{<span class="se">\i</span>nfty}
-b_n<span class="se">\s</span>in<span class="se">\l</span>eft(<span class="se">\f</span>rac{n<span class="se">\p</span>i x}{L}<span class="se">\r</span>ight)
+f(x)
+=
+\sum_{n=1}^{\infty}
+b_n
+\sin\left(
+\frac{n\pi x}{L}
+\right)
 $$
 
-This idea changed science.
+This equation says:
 
-Fourier discovered it while studying <span class="gs">**heat flow**</span>.
+&gt; complexity can be decomposed into harmonics.
 
-Today it powers:
-<span class="p">
--</span> signal processing
-<span class="p">-</span> quantum mechanics
-<span class="p">-</span> MRI reconstruction
-<span class="p">-</span> acoustics
-<span class="p">-</span> numerical simulation
-<span class="p">-</span> AI spectral methods
-<span class="p">
+Every term represents a vibration mode.
+
+Some contribute strongly.
+
+Others barely matter.
+
+Fourier turned vibration into composition.
+
 ---
-</span>
-<span class="gu">## One final idea</span>
 
-Fourier analysis teaches us something profound.
+## Why sine waves?
 
-Complicated motion is often only:
-<span class="gt">
-&gt; simple motion layered together.</span>
+This question bothered mathematicians for decades.
 
-Once you begin seeing waves as combinations of frequencies,
+Why do sine waves work so beautifully?
 
-complexity starts to feel composable.
-</code></pre></div></div> <p>The main change is:</p> <p><strong>remove textbook-style paragraphs</strong> and let the <strong>coded figures carry the intuition</strong>.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Google × Distill Style Rewrite for Fourier Article]]></summary></entry><entry><title type="html">Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra</title><link href="https://empirerahul2003.github.io/rahulkhanna.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra/" rel="alternate" type="text/html" title="Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra"/><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://empirerahul2003.github.io/rahulkhanna.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra</id><content type="html" xml:base="https://empirerahul2003.github.io/rahulkhanna.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra/"><![CDATA[<p>Learn more:Learn more:Learn more:Learn more:Learn more:Learn more:May 14, 2024 We’re introducing a series of updates across the Gemini family of models, including the new 1.5 Flash, our lightweight model for speed and efficiency, and Project Astra, our vision for the future of AI assistants. In December, we launched our first natively multimodal model Gemini 1.0 in three sizes: Ultra, Pro and Nano. Just a few months later we released 1.5 Pro, with enhanced performance and a breakthrough long context window of 1 million tokens.Developers and enterprise customers have been putting 1.5 Pro to use in incredible ways and finding its long context window, multimodal reasoning capabilities and impressive overall performance incredibly useful.We know from user feedback that some applications need lower latency and a lower cost to serve. This inspired us to keep innovating, so today, we’re introducing Gemini 1.5 Flash: a model that’s lighter-weight than 1.5 Pro, and designed to be fast and efficient to serve at scale.Both 1.5 Pro and 1.5 Flash are available in public preview with a 1 million token context window in Google AI Studio and Vertex AI. And now, 1.5 Pro is also available with a 2 million token context window via waitlist to developers using the API and to Google Cloud customers.We’re also introducing updates across the Gemini family of models, announcing our next generation of open models, Gemma 2, and sharing progress on the future of AI assistants, with Project Astra.Context lengths of leading foundation models compared with Gemini 1.5’s 2 million token capability1.5 Flash is the newest addition to the Gemini model family and the fastest Gemini model served in the API. It’s optimized for high-volume, high-frequency tasks at scale, is more cost-efficient to serve and features our breakthrough long context window.While it’s a lighter weight model than 1.5 Pro, it’s highly capable of multimodal reasoning across vast amounts of information and delivers impressive quality for its size.The new Gemini 1.5 Flash model is optimized for speed and efficiency, is highly capable of multimodal reasoning and features our breakthrough long context window.1.5 Flash excels at summarization, chat applications, image and video captioning, data extraction from long documents and tables, and more. This is because it’s been trained by 1.5 Pro through a process called “distillation,” where the most essential knowledge and skills from a larger model are transferred to a smaller, more efficient model.Read more about 1.5 Flash in our updated Gemini 1.5 technical report, on the Gemini technology page, and learn about 1.5 Flash’s availability and pricing.Over the last few months, we’ve significantly improved 1.5 Pro, our best model for general performance across a wide range of tasks.Beyond extending its context window to 2 million tokens, we’ve enhanced its code generation, logical reasoning and planning, multi-turn conversation, and audio and image understanding through data and algorithmic advances. We see strong improvements on public and internal benchmarks for each of these tasks.1.5 Pro can now follow increasingly complex and nuanced instructions, including ones that specify product-level behavior involving role, format and style. We’ve improved control over the model’s responses for specific use cases, like crafting the persona and response style of a chat agent or automating workflows through multiple function calls. And we’ve enabled users to steer model behavior by setting system instructions.We added audio understanding in the Gemini API and Google AI Studio, so 1.5 Pro can now reason across image and audio for videos uploaded in Google AI Studio. And we’re now integrating 1.5 Pro into Google products, including Gemini Advanced and in Workspace apps.Read more about 1.5 Pro in our updated Gemini 1.5 technical report and on the Gemini technology page.Gemini Nano is expanding beyond text-only inputs to include images as well. Starting with Pixel, applications using Gemini Nano with Multimodality will be able to understand the world the way people do — not just through text, but also through sight, sound and spoken language.Read more about Gemini 1.0 Nano on Android.Today, we’re also sharing a series of updates to Gemma, our family of open models built from the same research and technology used to create the Gemini models.We’re announcing Gemma 2, our next generation of open models for responsible AI innovation. Gemma 2 has a new architecture designed for breakthrough performance and efficiency, and will be available in new sizes.The Gemma family is also expanding with PaliGemma, our first vision-language model inspired by PaLI-3. And we’ve upgraded our Responsible Generative AI Toolkit with LLM Comparator for evaluating the quality of model responses.Read more on the Developer blog.As part of Google DeepMind’s mission to build AI responsibly to benefit humanity, we’ve always wanted to develop universal AI agents that can be helpful in everyday life. That’s why today, we’re sharing our progress in building the future of AI assistants with Project Astra (advanced seeing and talking responsive agent).To be truly useful, an agent needs to understand and respond to the complex and dynamic world just like people do — and take in and remember what it sees and hears to understand context and take action. It also needs to be proactive, teachable and personal, so users can talk to it naturally and without lag or delay.While we’ve made incredible progress developing AI systems that can understand multimodal information, getting response time down to something conversational is a difficult engineering challenge. Over the past few years, we’ve been working to improve how our models perceive, reason and converse to make the pace and quality of interaction feel more natural.Building on Gemini, we’ve developed prototype agents that can process information faster by continuously encoding video frames, combining the video and speech input into a timeline of events, and caching this information for efficient recall.By leveraging our leading speech models, we also enhanced how they sound, giving the agents a wider range of intonations. These agents can better understand the context they’re being used in, and respond quickly, in conversation.With technology like this, it’s easy to envision a future where people could have an expert AI assistant by their side, through a phone or glasses. And some of these capabilities are coming to Google products, like the Gemini app and web experience, later this year.We’ve made incredible progress so far with our family of Gemini models, and we’re always striving to advance the state-of-the-art even further. By investing in a relentless production line of innovation, we’re able to explore new ideas at the frontier, while also unlocking the possibility of new and exciting Gemini use cases.Learn more about Gemini and its capabilities. Your information will be used in accordance with Google’s privacy policy.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      Done. Just one step more.
+The answer is symmetry and orthogonality.
+
+Sine and cosine functions behave like independent directions.
+
+Much like:
+
+$$
+(1,0),\quad (0,1)
+$$
+
+in ordinary geometry.
+
+Different harmonics do not interfere.
+
+Mathematically:
+
+$$
+\int_{-\pi}^{\pi}
+\sin(mx)\sin(nx)\,dx
+=
+0
+\qquad
+(m\neq n)
+$$
+
+This orthogonality means:
+
+&gt; every frequency can be extracted independently.
+
+That is why Fourier coefficients exist.
+
+We can isolate the contribution of each harmonic.
+
+The coefficients become:
+
+$$
+a_n=
+\frac{1}{\pi}
+\int_{-\pi}^{\pi}
+f(x)\cos(nx)\,dx
+$$
+
+$$
+b_n=
+\frac{1}{\pi}
+\int_{-\pi}^{\pi}
+f(x)\sin(nx)\,dx
+$$
+
+Each coefficient answers a question:
+
+&gt; how much of frequency \(n\) exists inside the signal?
+
+---
+
+## A hidden conservation law
+
+Fourier analysis contains another surprise.
+
+Energy does not disappear.
+
+It merely redistributes across harmonics.
+
+This idea appears through **Parseval’s identity**:
+
+$$
+\frac{1}{\pi}
+\int_{-\pi}^{\pi}
+|f(x)|^2dx
+=
+\frac{a_0^2}{2}
++
+\sum_{n=1}^{\infty}
+(a_n^2+b_n^2)
+$$
+
+This equation says:
+
+&gt; total signal energy equals the sum of harmonic energies.
+
+Why does this matter?
+
+Because it explains compression.
+
+If high-frequency terms contribute very little:
+
+&gt; we can safely ignore them.
+
+This idea powers:
+
+- JPEG compression
+- MP3 audio
+- image denoising
+- filtering
+
+---
+
+## Where Fourier came from
+
+Fourier did not invent this theory for abstract mathematics.
+
+He was studying:
+
+&gt; heat flow.
+
+How does temperature spread through metal?
+
+The heat equation looked intimidating:
+
+$$
+\frac{\partial u}{\partial t}
+=
+\alpha
+\frac{\partial^2u}{\partial x^2}
+$$
+
+Fourier discovered something astonishing.
+
+Temperature profiles could be expanded into sine waves.
+
+Each harmonic evolved independently.
+
+This transformed mathematical physics.
+
+At first, many mathematicians doubted him.
+
+Could arbitrary functions really be represented by trigonometric waves?
+
+Eventually:
+
+&gt; Fourier was right.
+
+And modern mathematics changed because of it.
+
+---
+
+## Fourier everywhere
+
+Today, Fourier analysis appears almost everywhere.
+
+### Music
+
+A musical tone is not one frequency.
+
+It is a combination of harmonics.
+
+### Signal processing
+
+Noise removal happens in frequency space.
+
+### MRI imaging
+
+Images are reconstructed from frequencies.
+
+### Quantum mechanics
+
+Wavefunctions naturally decompose into modes.
+
+### Communications
+
+Bandwidth is fundamentally frequency-limited.
+
+### AI and scientific computing
+
+Spectral methods increasingly appear in neural operators and PDE solvers.
+
+---
+
+## One final idea
+
+Fourier analysis teaches something surprisingly deep.
+
+Complexity often hides simplicity.
+
+Complicated motion is frequently nothing more than:
+
+&gt; simple oscillations layered together.
+
+Once you begin seeing signals as collections of frequencies,
+
+the world starts looking different.
+
+Noise becomes structure.
+
+Patterns become harmonics.
+
+Complexity becomes composable.
+
+And that is the magic of Fourier series.
+</code></pre>]]></content><author><name></name></author><summary type="html"><![CDATA[```mdx layout: distill title: The magic of Fourier series description: &gt; How waves, interference, and harmonics combine to explain the mathematics of Fourier series. tags: fourier-analysis signal-processing physics math date: 2026-05-13 featured: true giscus_comments: false related_posts: false]]></summary></entry><entry><title type="html">Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra</title><link href="https://empirerahul2003.github.io/rahulkhanna.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra/" rel="alternate" type="text/html" title="Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra"/><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://empirerahul2003.github.io/rahulkhanna.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra</id><content type="html" xml:base="https://empirerahul2003.github.io/rahulkhanna.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra/"><![CDATA[<p>Learn more:Learn more:Learn more:Learn more:Learn more:Learn more:May 14, 2024 We’re introducing a series of updates across the Gemini family of models, including the new 1.5 Flash, our lightweight model for speed and efficiency, and Project Astra, our vision for the future of AI assistants. In December, we launched our first natively multimodal model Gemini 1.0 in three sizes: Ultra, Pro and Nano. Just a few months later we released 1.5 Pro, with enhanced performance and a breakthrough long context window of 1 million tokens.Developers and enterprise customers have been putting 1.5 Pro to use in incredible ways and finding its long context window, multimodal reasoning capabilities and impressive overall performance incredibly useful.We know from user feedback that some applications need lower latency and a lower cost to serve. This inspired us to keep innovating, so today, we’re introducing Gemini 1.5 Flash: a model that’s lighter-weight than 1.5 Pro, and designed to be fast and efficient to serve at scale.Both 1.5 Pro and 1.5 Flash are available in public preview with a 1 million token context window in Google AI Studio and Vertex AI. And now, 1.5 Pro is also available with a 2 million token context window via waitlist to developers using the API and to Google Cloud customers.We’re also introducing updates across the Gemini family of models, announcing our next generation of open models, Gemma 2, and sharing progress on the future of AI assistants, with Project Astra.Context lengths of leading foundation models compared with Gemini 1.5’s 2 million token capability1.5 Flash is the newest addition to the Gemini model family and the fastest Gemini model served in the API. It’s optimized for high-volume, high-frequency tasks at scale, is more cost-efficient to serve and features our breakthrough long context window.While it’s a lighter weight model than 1.5 Pro, it’s highly capable of multimodal reasoning across vast amounts of information and delivers impressive quality for its size.The new Gemini 1.5 Flash model is optimized for speed and efficiency, is highly capable of multimodal reasoning and features our breakthrough long context window.1.5 Flash excels at summarization, chat applications, image and video captioning, data extraction from long documents and tables, and more. This is because it’s been trained by 1.5 Pro through a process called “distillation,” where the most essential knowledge and skills from a larger model are transferred to a smaller, more efficient model.Read more about 1.5 Flash in our updated Gemini 1.5 technical report, on the Gemini technology page, and learn about 1.5 Flash’s availability and pricing.Over the last few months, we’ve significantly improved 1.5 Pro, our best model for general performance across a wide range of tasks.Beyond extending its context window to 2 million tokens, we’ve enhanced its code generation, logical reasoning and planning, multi-turn conversation, and audio and image understanding through data and algorithmic advances. We see strong improvements on public and internal benchmarks for each of these tasks.1.5 Pro can now follow increasingly complex and nuanced instructions, including ones that specify product-level behavior involving role, format and style. We’ve improved control over the model’s responses for specific use cases, like crafting the persona and response style of a chat agent or automating workflows through multiple function calls. And we’ve enabled users to steer model behavior by setting system instructions.We added audio understanding in the Gemini API and Google AI Studio, so 1.5 Pro can now reason across image and audio for videos uploaded in Google AI Studio. And we’re now integrating 1.5 Pro into Google products, including Gemini Advanced and in Workspace apps.Read more about 1.5 Pro in our updated Gemini 1.5 technical report and on the Gemini technology page.Gemini Nano is expanding beyond text-only inputs to include images as well. Starting with Pixel, applications using Gemini Nano with Multimodality will be able to understand the world the way people do — not just through text, but also through sight, sound and spoken language.Read more about Gemini 1.0 Nano on Android.Today, we’re also sharing a series of updates to Gemma, our family of open models built from the same research and technology used to create the Gemini models.We’re announcing Gemma 2, our next generation of open models for responsible AI innovation. Gemma 2 has a new architecture designed for breakthrough performance and efficiency, and will be available in new sizes.The Gemma family is also expanding with PaliGemma, our first vision-language model inspired by PaLI-3. And we’ve upgraded our Responsible Generative AI Toolkit with LLM Comparator for evaluating the quality of model responses.Read more on the Developer blog.As part of Google DeepMind’s mission to build AI responsibly to benefit humanity, we’ve always wanted to develop universal AI agents that can be helpful in everyday life. That’s why today, we’re sharing our progress in building the future of AI assistants with Project Astra (advanced seeing and talking responsive agent).To be truly useful, an agent needs to understand and respond to the complex and dynamic world just like people do — and take in and remember what it sees and hears to understand context and take action. It also needs to be proactive, teachable and personal, so users can talk to it naturally and without lag or delay.While we’ve made incredible progress developing AI systems that can understand multimodal information, getting response time down to something conversational is a difficult engineering challenge. Over the past few years, we’ve been working to improve how our models perceive, reason and converse to make the pace and quality of interaction feel more natural.Building on Gemini, we’ve developed prototype agents that can process information faster by continuously encoding video frames, combining the video and speech input into a timeline of events, and caching this information for efficient recall.By leveraging our leading speech models, we also enhanced how they sound, giving the agents a wider range of intonations. These agents can better understand the context they’re being used in, and respond quickly, in conversation.With technology like this, it’s easy to envision a future where people could have an expert AI assistant by their side, through a phone or glasses. And some of these capabilities are coming to Google products, like the Gemini app and web experience, later this year.We’ve made incredible progress so far with our family of Gemini models, and we’re always striving to advance the state-of-the-art even further. By investing in a relentless production line of innovation, we’re able to explore new ideas at the frontier, while also unlocking the possibility of new and exciting Gemini use cases.Learn more about Gemini and its capabilities. Your information will be used in accordance with Google’s privacy policy.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      Done. Just one step more.
     
       Check your inbox to confirm your subscription.
     You are already subscribed to our newsletter.

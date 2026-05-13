@@ -1,214 +1,491 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"> <html><body> <h1 id="google--distill-style-rewrite-for-fourier-article">Google × Distill Style Rewrite for Fourier Article</h1> <p>I rewrote the structure for a <strong>Google-blog visual storytelling style</strong> with <strong>Distill-like interactive figures</strong>.</p> <p>Your current article is mathematically strong, but it reads like a textbook. The new structure removes long exposition and shifts to:</p> <p><strong>idea → visual → insight → interaction</strong></p> <p>Based on your uploaded draft fileciteturn0file0L1-L118, the dense sections should be replaced with the following flow.</p> <div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
-<span class="na">layout</span><span class="pi">:</span> <span class="s">distill</span>
-<span class="na">title</span><span class="pi">:</span> <span class="s">The magic of Fourier series</span>
-<span class="na">description</span><span class="pi">:</span> <span class="pi">&gt;</span>
-  <span class="s">How waves, interference, and harmonics combine to explain</span>
-  <span class="s">the mathematics of Fourier series.</span>
-<span class="na">tags</span><span class="pi">:</span> <span class="s">fourier-analysis signal-processing physics math</span>
-<span class="na">date</span><span class="pi">:</span> <span class="s">2026-05-13</span>
-<span class="na">featured</span><span class="pi">:</span> <span class="kc">true</span>
-<span class="na">giscus_comments</span><span class="pi">:</span> <span class="kc">false</span>
-<span class="na">related_posts</span><span class="pi">:</span> <span class="kc">false</span>
-<span class="nn">---</span>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"> <html><body> <pre><code class="language-mdx">layout: distill
+title: The magic of Fourier series
+description: &gt;
+  How waves, interference, and harmonics combine to explain
+  the mathematics of Fourier series.
+tags: fourier-analysis signal-processing physics math
+date: 2026-05-13
+featured: true
+giscus_comments: false
+related_posts: false
 
-<span class="gh"># The magic of Fourier series</span>
+# The magic of Fourier series
 
-<span class="gu">## How waves, interference, and harmonics explain complicated motion.</span>
+## How waves, interference, and harmonics explain complicated motion.
 
 Suppose you pluck a guitar string.
 
 Something strange happens.
 
 A messy shape appears.
+
 It vibrates.
+
 It changes.
 
-Yet beneath the complexity, nature is doing something surprisingly simple:
-<span class="gt">
-&gt; every complicated vibration can be built from simpler waves.</span>
+And yet, beneath the complexity, nature is doing something surprisingly simple.
 
-This is the central idea behind Fourier series.
+&gt; complicated motion can emerge from simple waves.
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hero-note"</span><span class="nt">&gt;</span>
-Move the sliders. Break the wave. Rebuild it.
-The mathematics emerges visually.
-<span class="nt">&lt;/div&gt;</span>
+Fourier series is the mathematical language behind that idea.
 
-<span class="nt">&lt;TravelingWaveFigure</span> <span class="nt">/&gt;</span>
-<span class="p">
+But before we talk about Fourier, we must first understand something deeper:
+
+&gt; how waves behave.
+
 ---
-</span>
-<span class="gu">## A wave that travels</span>
 
-A traveling wave moves.
+## A wave that travels
 
-Its shape survives.
+Imagine flicking a rope.
+
+A bump appears.
+
+Then it moves.
+
+Not randomly.
+
+Not chaotically.
+
+The shape survives.
+
 Only its position changes.
 
-Instead of thinking:
-<span class="gt">
-&gt; “the wave changes shape”</span>
+This is a **traveling wave**.
 
-think:
-<span class="gt">
-&gt; “the same shape is moving through space.”</span>
+&lt;div class="distill-figure"&gt;
+  &lt;div id="traveling-wave"&gt;&lt;/div&gt;
+&lt;/div&gt;
 
-<span class="nt">&lt;TravelingWaveFigure</span> <span class="nt">/&gt;</span>
+At first glance, this motion feels obvious.
 
-$$
-u(x,t)=A<span class="se">\s</span>in(kx-<span class="se">\o</span>mega t)$$
+But something subtle is happening.
 
-Try changing:
-<span class="p">
--</span> amplitude
-<span class="p">-</span> wavelength
-<span class="p">-</span> oscillation speed
-
-Notice what stays constant:
-<span class="gt">
-&gt; the profile itself.</span>
-
-This idea seems simple.
-
-But it sets up one of the deepest ideas in mathematical physics.
-
-What happens when waves move in opposite directions?
-<span class="p">
----
-</span>
-<span class="gu">## When motion freezes</span>
-
-Now fix both ends of the string.
-
-Waves reflect.
-They collide.
-
-Something unexpected appears.
-
-The pattern stops moving.
+The wave is not reinventing itself every instant.
 
 Instead:
-<span class="gt">
-&gt; it oscillates in place.</span>
 
-Some points never move at all.
+&gt; the same shape is simply moving through space.
 
-These are called <span class="gs">**nodes**</span>.
-
-<span class="nt">&lt;StandingWaveFigure</span> <span class="nt">/&gt;</span>
+Mathematically, we describe this as
 
 $$
-u(x,t)=A<span class="se">\s</span>in(kx)<span class="se">\c</span>os(<span class="se">\o</span>mega t)$$
+u(x,t)=A\sin(kx-\omega t)
+$$
 
-Notice something subtle.
+Here:
 
-The equation separates naturally:
-<span class="p">
--</span> one part describes <span class="gs">**shape in space**</span>
-<span class="p">-</span> one part describes <span class="gs">**motion in time**</span>
+- \(A\) controls amplitude
+- \(k\) controls wavelength
+- \(\omega\) controls oscillation speed
 
-That separation becomes enormously important later in physics.
+Try changing the parameters.
 
-But standing waves are not fundamental.
+Notice something important:
+
+&gt; the profile itself never changes.
+
+Only its position shifts.
+
+The mathematics is hiding a beautiful idea:
+
+motion can sometimes be represented as a **translation of shape**.
+
+But what happens when waves move in opposite directions?
+
+---
+
+## When motion freezes
+
+Now imagine a string fixed at both ends.
+
+You pluck it.
+
+The wave moves.
+
+It reflects.
+
+It travels back.
+
+Soon, something unexpected happens.
+
+The motion seems to stop.
+
+Not completely.
+
+But strangely.
+
+The shape no longer travels.
+
+Instead:
+
+&gt; it oscillates in place.
+
+This is called a **standing wave**.
+
+&lt;StandingWaveFigure /&gt;
+
+Look carefully.
+
+Some points never move.
+
+These are called **nodes**.
+
+Others move dramatically.
+
+These are **antinodes**.
+
+Unlike traveling waves:
+
+&gt; the shape stays fixed.
+
+Only its amplitude changes with time.
+
+The mathematics becomes
+
+$$
+u(x,t)=A\sin(kx)\cos(\omega t)
+$$
+
+Something remarkable has happened.
+
+The equation naturally separates:
+
+- one part controls **space**
+- one part controls **time**
+
+This is one of the first glimpses of a profound mathematical idea:
+
+&gt; separation of variables.
+
+It appears everywhere in physics:
+
+- quantum mechanics
+- heat conduction
+- electromagnetism
+- acoustics
+
+But standing waves themselves are not fundamental.
 
 They emerge from something simpler.
-<span class="p">
+
 ---
-</span>
-<span class="gu">## The hidden mechanism: interference</span>
 
-A standing wave looks mysterious.
+## The hidden mechanism: interference
 
-Why should a wave stay frozen?
+Standing waves feel mysterious.
 
-The answer is surprisingly beautiful.
+Why should motion freeze?
+
+The answer is interference.
 
 Take:
-<span class="p">
--</span> one wave moving right
-<span class="p">-</span> one wave moving left
+
+- one wave moving right
+- one wave moving left
 
 Add them together.
 
-<span class="nt">&lt;InterferenceFigure</span> <span class="nt">/&gt;</span>
+&lt;InterferenceFigure /&gt;
 
 Suddenly the mystery disappears.
 
-A standing wave is simply:
-<span class="gt">
-&gt; interference.</span>
+A standing wave is not a new kind of wave.
+
+It is simply:
+
+&gt; two traveling waves interfering.
+
+Mathematically:
 
 $$
-<span class="se">\s</span>in(kx-<span class="se">\o</span>mega t)+<span class="se">\s</span>in(kx+<span class="se">\o</span>mega t)
+\sin(kx-\omega t)
++
+\sin(kx+\omega t)
 =
-2<span class="se">\s</span>in(kx)<span class="se">\c</span>os(<span class="se">\o</span>mega t)
+2\sin(kx)\cos(\omega t)
 $$
 
-Nodes appear because destructive interference permanently cancels motion at fixed points.
+This identity explains everything.
+
+Nodes appear because:
+
+&gt; destructive interference permanently cancels motion at fixed points.
+
+Antinodes appear because:
+
+&gt; constructive interference amplifies oscillation.
 
 This is why:
-<span class="p">
--</span> guitar strings resonate
-<span class="p">-</span> violin harmonics emerge
-<span class="p">-</span> resonant cavities work
 
-But real vibrations are messy.
+- guitar strings resonate
+- violin harmonics appear
+- organ pipes sing
+- resonant cavities exist
 
-A plucked string does not look like a clean sine wave.
+But a real plucked string is messy.
 
-So how does nature describe arbitrary shapes?
-<span class="p">
+Its shape is not a perfect sine wave.
+
+So how does nature handle complicated vibrations?
+
 ---
-</span>
-<span class="gu">## Fourier’s astonishing insight</span>
+
+## Fourier’s astonishing idea
 
 Imagine plucking a string into an ugly shape.
 
-Sharp edges.
+Sharp bends.
+
 Asymmetry.
-Irregular motion.
 
-Fourier’s radical proposal was:
-<span class="gt">
-&gt; even complicated shapes can be written as sums of simple standing waves.</span>
+Complex motion.
 
-<span class="nt">&lt;FourierDecompositionFigure</span> <span class="nt">/&gt;</span>
+Nothing like a simple sine wave.
 
-Each harmonic vibrates independently.
+And yet nature evolves it perfectly.
+
+How?
+
+Fourier proposed something radical:
+
+&gt; any reasonable shape can be built from simple standing-wave modes.
+
+That claim changed mathematics forever.
+
+&lt;FourierDecompositionFigure /&gt;
+
+Move the slider.
+
+Add more modes.
+
+Watch complexity emerge from simplicity.
+
+Each oscillation contributes something small.
 
 Together:
-<span class="gt">
-&gt; they reconstruct complexity.</span>
+
+&gt; they reconstruct the original shape.
+
+Mathematically:
 
 $$
-f(x)=<span class="se">\s</span>um_{n=1}^{<span class="se">\i</span>nfty}
-b_n<span class="se">\s</span>in<span class="se">\l</span>eft(<span class="se">\f</span>rac{n<span class="se">\p</span>i x}{L}<span class="se">\r</span>ight)
+f(x)
+=
+\sum_{n=1}^{\infty}
+b_n
+\sin\left(
+\frac{n\pi x}{L}
+\right)
 $$
 
-This idea changed science.
+This equation says:
 
-Fourier discovered it while studying <span class="gs">**heat flow**</span>.
+&gt; complexity can be decomposed into harmonics.
 
-Today it powers:
-<span class="p">
--</span> signal processing
-<span class="p">-</span> quantum mechanics
-<span class="p">-</span> MRI reconstruction
-<span class="p">-</span> acoustics
-<span class="p">-</span> numerical simulation
-<span class="p">-</span> AI spectral methods
-<span class="p">
+Every term represents a vibration mode.
+
+Some contribute strongly.
+
+Others barely matter.
+
+Fourier turned vibration into composition.
+
 ---
-</span>
-<span class="gu">## One final idea</span>
 
-Fourier analysis teaches us something profound.
+## Why sine waves?
 
-Complicated motion is often only:
-<span class="gt">
-&gt; simple motion layered together.</span>
+This question bothered mathematicians for decades.
 
-Once you begin seeing waves as combinations of frequencies,
+Why do sine waves work so beautifully?
 
-complexity starts to feel composable.
-</code></pre></div></div> <p>The main change is:</p> <p><strong>remove textbook-style paragraphs</strong> and let the <strong>coded figures carry the intuition</strong>.</p> </body></html>
+The answer is symmetry and orthogonality.
+
+Sine and cosine functions behave like independent directions.
+
+Much like:
+
+$$
+(1,0),\quad (0,1)
+$$
+
+in ordinary geometry.
+
+Different harmonics do not interfere.
+
+Mathematically:
+
+$$
+\int_{-\pi}^{\pi}
+\sin(mx)\sin(nx)\,dx
+=
+0
+\qquad
+(m\neq n)
+$$
+
+This orthogonality means:
+
+&gt; every frequency can be extracted independently.
+
+That is why Fourier coefficients exist.
+
+We can isolate the contribution of each harmonic.
+
+The coefficients become:
+
+$$
+a_n=
+\frac{1}{\pi}
+\int_{-\pi}^{\pi}
+f(x)\cos(nx)\,dx
+$$
+
+$$
+b_n=
+\frac{1}{\pi}
+\int_{-\pi}^{\pi}
+f(x)\sin(nx)\,dx
+$$
+
+Each coefficient answers a question:
+
+&gt; how much of frequency \(n\) exists inside the signal?
+
+---
+
+## A hidden conservation law
+
+Fourier analysis contains another surprise.
+
+Energy does not disappear.
+
+It merely redistributes across harmonics.
+
+This idea appears through **Parseval’s identity**:
+
+$$
+\frac{1}{\pi}
+\int_{-\pi}^{\pi}
+|f(x)|^2dx
+=
+\frac{a_0^2}{2}
++
+\sum_{n=1}^{\infty}
+(a_n^2+b_n^2)
+$$
+
+This equation says:
+
+&gt; total signal energy equals the sum of harmonic energies.
+
+Why does this matter?
+
+Because it explains compression.
+
+If high-frequency terms contribute very little:
+
+&gt; we can safely ignore them.
+
+This idea powers:
+
+- JPEG compression
+- MP3 audio
+- image denoising
+- filtering
+
+---
+
+## Where Fourier came from
+
+Fourier did not invent this theory for abstract mathematics.
+
+He was studying:
+
+&gt; heat flow.
+
+How does temperature spread through metal?
+
+The heat equation looked intimidating:
+
+$$
+\frac{\partial u}{\partial t}
+=
+\alpha
+\frac{\partial^2u}{\partial x^2}
+$$
+
+Fourier discovered something astonishing.
+
+Temperature profiles could be expanded into sine waves.
+
+Each harmonic evolved independently.
+
+This transformed mathematical physics.
+
+At first, many mathematicians doubted him.
+
+Could arbitrary functions really be represented by trigonometric waves?
+
+Eventually:
+
+&gt; Fourier was right.
+
+And modern mathematics changed because of it.
+
+---
+
+## Fourier everywhere
+
+Today, Fourier analysis appears almost everywhere.
+
+### Music
+
+A musical tone is not one frequency.
+
+It is a combination of harmonics.
+
+### Signal processing
+
+Noise removal happens in frequency space.
+
+### MRI imaging
+
+Images are reconstructed from frequencies.
+
+### Quantum mechanics
+
+Wavefunctions naturally decompose into modes.
+
+### Communications
+
+Bandwidth is fundamentally frequency-limited.
+
+### AI and scientific computing
+
+Spectral methods increasingly appear in neural operators and PDE solvers.
+
+---
+
+## One final idea
+
+Fourier analysis teaches something surprisingly deep.
+
+Complexity often hides simplicity.
+
+Complicated motion is frequently nothing more than:
+
+&gt; simple oscillations layered together.
+
+Once you begin seeing signals as collections of frequencies,
+
+the world starts looking different.
+
+Noise becomes structure.
+
+Patterns become harmonics.
+
+Complexity becomes composable.
+
+And that is the magic of Fourier series.
+</code></pre> </body></html>
