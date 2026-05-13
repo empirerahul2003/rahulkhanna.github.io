@@ -12,7 +12,7 @@ profile:
     <p>Dalhousie, Himachal Pradesh, India</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: false # social icons moved to top-left header
 
 announcements:
   enabled: false # includes a list of news items
