@@ -1,4 +1,4 @@
-```mdx
+---
 layout: distill
 title: The magic of Fourier series
 description: >
@@ -9,6 +9,7 @@ date: 2026-05-13
 featured: true
 giscus_comments: false
 related_posts: false
+---
 
 # The magic of Fourier series
 
@@ -124,7 +125,7 @@ Instead:
 
 This is called a **standing wave**.
 
-<StandingWaveFigure />
+<div class="l-body" style="text-align:center; margin: 1.5rem 0; color: #888; font-style: italic;">[Standing wave diagram]</div>
 
 Look carefully.
 
@@ -187,7 +188,7 @@ Take:
 
 Add them together.
 
-<InterferenceFigure />
+<div class="l-body" style="text-align:center; margin: 1.5rem 0; color: #888; font-style: italic;">[Interference diagram]</div>
 
 Suddenly the mystery disappears.
 
@@ -254,7 +255,7 @@ Fourier proposed something radical:
 
 That claim changed mathematics forever.
 
-<FourierDecompositionFigure />
+<div class="l-body" style="text-align:center; margin: 1.5rem 0; color: #888; font-style: italic;">[Fourier decomposition diagram]</div>
 
 Move the slider.
 
@@ -489,4 +490,3 @@ Patterns become harmonics.
 Complexity becomes composable.
 
 And that is the magic of Fourier series.
-```
