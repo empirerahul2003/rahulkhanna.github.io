@@ -1,119 +1,229 @@
+# Google × Distill Style Rewrite for Fourier Article
+
+I rewrote the structure for a **Google-blog visual storytelling style** with **Distill-like interactive figures**.
+
+Your current article is mathematically strong, but it reads like a textbook. The new structure removes long exposition and shifts to:
+
+**idea → visual → insight → interaction**
+
+Based on your uploaded draft fileciteturn0file0L1-L118, the dense sections should be replaced with the following flow.
+
+```md
 ---
 layout: distill
 title: The magic of Fourier series
 description: >
-  How sines and cosines assemble into almost any periodic signal—and why that idea
-  powers so much of modern science and engineering.
+  How waves, interference, and harmonics combine to explain
+  the mathematics of Fourier series.
 tags: fourier-analysis signal-processing physics math
 date: 2026-05-13
 featured: true
 giscus_comments: false
 related_posts: false
-
-mermaid:
-  enabled: false
-
-authors:
-  - name: Rahul K. Khanna
-    url: "https://empirerahul2003.github.io/rahulkhanna.github.io/"
-    affiliations:
-      name: Dalhousie, Himachal Pradesh, India
-      url: ""
-
-toc:
-  - name: The core idea
-  - name: Sines, cosines, and symmetry
-  - name: Finding the coefficients
-  - name: Energy and parsimony
-  - name: When the picture is trustworthy
-  - name: Where you meet Fourier every day
 ---
 
-## The core idea
+# The magic of Fourier series
 
-If you have a **periodic** signal—something that repeats every fixed interval—you can often write it as a **sum of simple waves** with integer multiples of a base frequency. That is the heart of a **Fourier series**: complicated repetition decomposes into a choir of harmonics.
+## How waves, interference, and harmonics explain complicated motion.
 
-The mental image is additive synthesis in music: a pure tone is a sine wave; combine enough tones at the right amplitudes and phases, and you can approximate rich timbres. Fourier analysis makes that intuition quantitative.
+Suppose you pluck a guitar string.
 
----
+Something strange happens.
 
-## Sines, cosines, and symmetry
+A messy shape appears.
+It vibrates.
+It changes.
 
-For a real-valued signal with period $$2\pi$$, a common form is
+Yet beneath the complexity, nature is doing something surprisingly simple:
 
-$$
-f(x) \sim \frac{a_0}{2} + \sum_{n=1}^{\infty} \bigl( a_n \cos(nx) + b_n \sin(nx) \bigr).
-$$
+> every complicated vibration can be built from simpler waves.
 
-The term $$\cos(nx)$$ is **even** about $$x=0$$; $$\sin(nx)$$ is **odd**. Many real systems respect approximate symmetries; Fourier coefficients encode how much “even” versus “odd” structure is present at each harmonic number $$n$$.
+This is the central idea behind Fourier series.
 
-Equivalently, one can package sines and cosines into complex exponentials using Euler’s formula,
+<div class="hero-note">
+Move the sliders. Break the wave. Rebuild it.
+The mathematics emerges visually.
+</div>
 
-$$
-e^{inx} = \cos(nx) + i\sin(nx),
-$$
-
-which leads to the compact complex series
-
-$$
-f(x) \sim \sum_{n=-\infty}^{\infty} c_n \, e^{inx},
-$$
-
-with reality of $$f$$ imposing the constraint $$c_{-n} = \overline{c_n}$$. This form is especially natural in quantum mechanics, optics, and signal processing, where **phase** is as important as amplitude.
+<TravelingWaveFigure />
 
 ---
 
-## Finding the coefficients
+## A wave that travels
 
-On a convenient interval—say $$[-\pi,\pi]$$—orthogonality relations let you **project** $$f$$ onto each harmonic. For integers $$m,n \ge 1$$,
+A traveling wave moves.
+
+Its shape survives.
+Only its position changes.
+
+Instead of thinking:
+
+> “the wave changes shape”
+
+think:
+
+> “the same shape is moving through space.”
+
+<TravelingWaveFigure />
 
 $$
-\int_{-\pi}^{\pi} \cos(mx)\cos(nx)\,dx
-$$
+u(x,t)=A\sin(kx-\omega t)$$
 
-vanishes unless $$m=n$$ (and similarly for sines, with mixed $$\sin\cos$$ integrals vanishing). That is why the coefficients can be picked off one at a time, without solving a giant coupled system.
+Try changing:
 
-The standard formulas (for the $$2\pi$$-periodic case) are
+- amplitude
+- wavelength
+- oscillation speed
 
-$$
-a_n = \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\cos(nx)\,dx,
-\qquad
-b_n = \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\sin(nx)\,dx.
-$$
+Notice what stays constant:
 
-So each $$a_n$$ and $$b_n$$ answers a simple question: **how much** of frequency $$n$$ is inside $$f$$, measured in the $$L^2$$ inner product sense?
+> the profile itself.
+
+This idea seems simple.
+
+But it sets up one of the deepest ideas in mathematical physics.
+
+What happens when waves move in opposite directions?
 
 ---
 
-## Energy and parsimony
+## When motion freezes
 
-One of the most useful consequences is **Parseval’s identity** (under appropriate hypotheses): the total “energy” of the signal equals the sum of the energies in its harmonics. Schematically,
+Now fix both ends of the string.
+
+Waves reflect.
+They collide.
+
+Something unexpected appears.
+
+The pattern stops moving.
+
+Instead:
+
+> it oscillates in place.
+
+Some points never move at all.
+
+These are called **nodes**.
+
+<StandingWaveFigure />
 
 $$
-\frac{1}{\pi}\int_{-\pi}^{\pi} |f(x)|^2 dx
-\;=\;
-\frac{a_0^2}{2} + \sum_{n=1}^{\infty}\bigl(a_n^2 + b_n^2\bigr),
-$$
+u(x,t)=A\sin(kx)\cos(\omega t)$$
 
-up to the conventional normalization you choose. Practically, this tells you when a truncated series is “good enough”: if high harmonics carry negligible energy, they are safe to drop for compression, filtering, or modeling.
+Notice something subtle.
+
+The equation separates naturally:
+
+- one part describes **shape in space**
+- one part describes **motion in time**
+
+That separation becomes enormously important later in physics.
+
+But standing waves are not fundamental.
+
+They emerge from something simpler.
 
 ---
 
-## When the picture is trustworthy
+## The hidden mechanism: interference
 
-Fourier series are not a free lunch. The classical story involves conditions like **piecewise smoothness** and careful treatment at **jump discontinuities**, where partial sums exhibit **Gibbs overshoot**—persistent ringing near edges unless you modify the summation method.
+A standing wave looks mysterious.
 
-For applications, the relevant takeaway is pragmatic: many physical signals are smooth enough that a modest number of terms captures almost all the energy; others—sharp edges, impulses—need more care (more terms, windowing, or alternative bases such as wavelets).
+Why should a wave stay frozen?
+
+The answer is surprisingly beautiful.
+
+Take:
+
+- one wave moving right
+- one wave moving left
+
+Add them together.
+
+<InterferenceFigure />
+
+Suddenly the mystery disappears.
+
+A standing wave is simply:
+
+> interference.
+
+$$
+\sin(kx-\omega t)+\sin(kx+\omega t)
+=
+2\sin(kx)\cos(\omega t)
+$$
+
+Nodes appear because destructive interference permanently cancels motion at fixed points.
+
+This is why:
+
+- guitar strings resonate
+- violin harmonics emerge
+- resonant cavities work
+
+But real vibrations are messy.
+
+A plucked string does not look like a clean sine wave.
+
+So how does nature describe arbitrary shapes?
 
 ---
 
-## Where you meet Fourier every day
+## Fourier’s astonishing insight
 
-The same harmonic decomposition shows up across disciplines:
+Imagine plucking a string into an ugly shape.
 
-- **Audio and music**: timbre as partials; equalizers as frequency gain.
-- **Imaging and sensing**: MRI uses spatial frequencies in $$k$$-space; many reconstruction pipelines are Fourier-flavored.
-- **Communications**: bandwidth limits are frequency limits; modulation plays in Fourier space.
-- **Numerics**: the **discrete Fourier transform (DFT)** and the **FFT** make the idea computable on sampled data—this is the workhorse behind countless digital filters and spectral diagnostics.
+Sharp edges.
+Asymmetry.
+Irregular motion.
 
-If you take one slogan from Fourier analysis, let it be this: **periodicity invites frequency**. Once you see that lens, noisy time traces and intricate waveforms start to look less mysterious—and a lot more composable.
+Fourier’s radical proposal was:
+
+> even complicated shapes can be written as sums of simple standing waves.
+
+<FourierDecompositionFigure />
+
+Each harmonic vibrates independently.
+
+Together:
+
+> they reconstruct complexity.
+
+$$
+f(x)=\sum_{n=1}^{\infty}
+b_n\sin\left(\frac{n\pi x}{L}\right)
+$$
+
+This idea changed science.
+
+Fourier discovered it while studying **heat flow**.
+
+Today it powers:
+
+- signal processing
+- quantum mechanics
+- MRI reconstruction
+- acoustics
+- numerical simulation
+- AI spectral methods
+
+---
+
+## One final idea
+
+Fourier analysis teaches us something profound.
+
+Complicated motion is often only:
+
+> simple motion layered together.
+
+Once you begin seeing waves as combinations of frequencies,
+
+complexity starts to feel composable.
+```
+
+The main change is:
+
+**remove textbook-style paragraphs** and let the **coded figures carry the intuition**.
