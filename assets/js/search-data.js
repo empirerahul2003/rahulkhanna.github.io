@@ -37,11 +37,11 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/rahulkhanna.github.io/cv/";
           },
-        },{id: "post-magic-of-fourier-series",
+        },{id: "post-the-magic-of-fourier-series",
         
-          title: "Magic Of Fourier Series",
+          title: "The magic of Fourier series",
         
-        description: "",
+        description: "How waves, interference, and harmonics combine to explain the mathematics of Fourier series.",
         section: "Posts",
         handler: () => {
           
