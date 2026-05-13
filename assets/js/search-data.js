@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/rahulkhanna.github.io/cv/";
           },
-        },{id: "post-a-post-with-plotly-js",
+        },{id: "post-the-magic-of-fourier-series",
+        
+          title: "The magic of Fourier series",
+        
+        description: "How sines and cosines assemble into almost any periodic signal—and why that idea powers so much of modern science and engineering.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/rahulkhanna.github.io/blog/2026/magic-of-fourier-series/";
+          
+        },
+      },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
         
