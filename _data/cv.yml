@@ -29,7 +29,6 @@ cv:
         studyType: Master of Science
         start_date: 2023
         end_date: 2025
-        courses: "Quantum Computing, Quantum Information Science, Computational Physics, Geometric Algebra, Physics-Informed Machine Learning"
 
       - institution: Himachal Pradesh University
         location: Shimla, Himachal Pradesh, India
