@@ -50,11 +50,11 @@
     host.appendChild(wrap);
 
     const ctx = canvas.getContext("2d");
+    let controlsEl = null;
     const state = {
       host,
       canvas,
       ctx,
-      controlsEl,
       width: 0,
       height: 0,
       padding: opts.padding || { top: 24, right: 20, bottom: 36, left: 48 },
