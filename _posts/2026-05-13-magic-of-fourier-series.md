@@ -16,41 +16,9 @@ distill_wave_viz: true
 
 ## How complicated motion emerges from simple waves
 
-Suppose you pluck a guitar string.
+Suppose you pluck a guitar string. For a brief moment, the string takes on a strange shape: it bends awkwardly and is neither smooth nor simple. Then it begins to move. The string vibrates, and the motion looks complicated—yet something curious happens. The vibration never feels random. A musician hears tone, a physicist sees oscillation, and a mathematician sees something stranger still: structure hidden beneath complexity.
 
-For a brief moment, the string takes on a strange shape.
-
-It bends awkwardly.
-
-It is neither smooth nor simple.
-
-Then it begins to move.
-
-The string vibrates.
-
-The motion looks complicated.
-
-And yet something curious happens.
-
-The vibration never feels random.
-
-A musician hears tone.
-
-A physicist sees oscillation.
-
-A mathematician sees something stranger:
-
-> structure hidden beneath complexity.
-
-Hidden underneath the apparent chaos is a remarkable truth:
-
-> complicated motion often emerges from simple oscillations.
-
-Fourier series is the mathematical language that explains why.
-
-But before discussing Fourier coefficients or infinite sums, we must understand something more fundamental:
-
-> what waves actually do.
+Hidden underneath the apparent chaos is a remarkable truth. Complicated motion often emerges from simple oscillations, and Fourier series is the mathematical language that explains why. But before discussing Fourier coefficients or infinite sums, we must understand something more fundamental: what waves actually do.
 
 ---
 
@@ -58,37 +26,13 @@ But before discussing Fourier coefficients or infinite sums, we must understand 
 
 ## Waves that move
 
-Imagine holding one end of a rope.
-
-You flick it upward.
-
-A disturbance appears.
-
-Then something remarkable happens.
-
-The disturbance moves.
-
-The shape survives.
-
-Only its position changes.
-
-This is called a **traveling wave**.
+Imagine holding one end of a rope and flicking it upward. A disturbance appears, then something remarkable happens: the disturbance moves, the shape survives, and only its position changes. This is called a **traveling wave**.
 
 <div class="distill-figure">
   <div id="traveling-wave"></div>
 </div>
 
-At first glance, this motion seems obvious.
-
-Of course waves move.
-
-But there is already a subtle mathematical idea hiding underneath.
-
-The wave is not continuously reinventing itself.
-
-Instead:
-
-> the same profile is translated through space.
+At first glance, this motion seems obvious—of course waves move. But there is already a subtle mathematical idea hiding underneath. The wave is not continuously reinventing itself; instead, the same profile is translated through space.
 
 Mathematically, a traveling wave can be written as
 
@@ -96,69 +40,15 @@ $$
 u(x,t)=A\sin(kx-\omega t)
 $$
 
-Let us unpack this slowly.
+Let us unpack this slowly. The parameter \(A\) controls the **amplitude** and determines how large the oscillation becomes. The quantity \(k\) controls the **wavelength**; larger values produce tighter oscillations. The parameter \(\omega\) controls how rapidly the oscillation evolves in time.
 
-The parameter (A) controls the **amplitude**.
-
-It determines how large the oscillation becomes.
-
-The quantity (k) controls the **wavelength**.
-
-Larger values produce tighter oscillations.
-
-The parameter (\omega) controls how rapidly the oscillation evolves in time.
-
-But the deeper point is this:
-
-> the shape itself does not fundamentally change.
-
-Only the position shifts.
-
-Traveling waves are motion with memory.
-
-The profile survives while moving.
-
-This idea matters because Fourier analysis ultimately decomposes complicated motion into combinations of such oscillatory patterns.
-
-But traveling waves are only half the story.
-
-Real strings have boundaries.
-
-And boundaries change everything.
+But the deeper point is this: the shape itself does not fundamentally change—only the position shifts. Traveling waves are motion with memory; the profile survives while moving. This idea matters because Fourier analysis ultimately decomposes complicated motion into combinations of such oscillatory patterns. But traveling waves are only half the story. Real strings have boundaries, and boundaries change everything.
 
 ---
 
 ## When motion freezes
 
-Now imagine a guitar string.
-
-Unlike an infinitely long rope, both ends are fixed.
-
-You pluck it.
-
-A wave travels.
-
-It reaches the boundary.
-
-Then reflects.
-
-Soon another wave travels back.
-
-Waves begin colliding with one another.
-
-Something surprising appears.
-
-The pattern seems frozen.
-
-Not completely motionless.
-
-But strangely stationary.
-
-The shape no longer travels across the string.
-
-Instead:
-
-> it oscillates in place.
+Now imagine a guitar string. Unlike an infinitely long rope, both ends are fixed. You pluck it: a wave travels, reaches the boundary, and reflects. Soon another wave travels back, and the waves begin colliding with one another. Something surprising appears—the pattern seems frozen, not completely motionless but strangely stationary. The shape no longer travels across the string; instead, it oscillates in place.
 
 This is called a **standing wave**.
 
@@ -166,21 +56,9 @@ This is called a **standing wave**.
   <div id="standing-wave"></div>
 </div>
 
-Look carefully.
+Look carefully. Some points never move—these are called **nodes**. Other points vibrate strongly; these are called **antinodes**.
 
-Some points never move.
-
-Ever.
-
-These are called **nodes**.
-
-Other points vibrate strongly.
-
-These are called **antinodes**.
-
-Unlike traveling waves:
-
-> the spatial structure remains fixed.
+Unlike traveling waves, the spatial structure remains fixed.
 
 The mathematics changes form:
 
@@ -192,13 +70,7 @@ Something remarkable has happened.
 
 The equation naturally separates into two pieces.
 
-One term determines:
-
-> shape in space.
-
-The other determines:
-
-> motion in time.
+One term determines shape in space; the other determines motion in time.
 
 This idea — separating a complicated problem into independent pieces — becomes one of the most powerful ideas in theoretical physics.
 
@@ -242,9 +114,7 @@ What once looked mysterious now becomes inevitable.
 
 Standing waves are not a separate species of motion.
 
-Instead:
-
-> they are built from traveling waves.
+Instead, they are built from traveling waves.
 
 Mathematically,
 
@@ -292,47 +162,13 @@ Fourier proposed an astonishing answer.
 
 ## Fourier’s leap
 
-What if complicated shapes are not truly fundamental?
-
-What if complexity itself can be constructed?
-
-Fourier proposed something radical:
-
-> any reasonable periodic shape can be represented as a sum of simpler oscillatory modes.
-
-In other words:
-
-> complicated motion can emerge from simple vibrations.
+What if complicated shapes are not truly fundamental? What if complexity itself can be constructed? Fourier proposed something radical: any reasonable periodic shape can be represented as a sum of simpler oscillatory modes. In other words, complicated motion can emerge from simple vibrations.
 
 <div class="distill-figure">
   <div id="fourier-wave"></div>
 </div>
 
-Move the slider.
-
-Add harmonics.
-
-Watch the shape change.
-
-Something remarkable becomes visible.
-
-No single sine wave reproduces the signal.
-
-But many of them together begin approximating it.
-
-Sharp corners emerge.
-
-Asymmetry appears.
-
-Complicated shapes slowly form.
-
-This is the central intuition behind Fourier series.
-
-Before moving into rigorous mathematics, pause here for a moment.
-
-Fourier’s idea says something profound:
-
-> complexity may simply be layered simplicity.
+Move the slider, add harmonics, and watch the shape change. Something remarkable becomes visible: no single sine wave reproduces the signal, but many of them together begin approximating it. Sharp corners emerge, asymmetry appears, and complicated shapes slowly form. This is the central intuition behind Fourier series. Before moving into rigorous mathematics, pause here for a moment. Fourier’s idea says something profound: complexity may simply be layered simplicity.
 
 ---
 
@@ -448,9 +284,7 @@ Different harmonics do not interfere with one another.
 
 Each frequency behaves like an independent direction.
 
-This means:
-
-> we can isolate each oscillatory mode separately.
+This means, we can isolate each oscillatory mode separately.
 
 And that allows us to determine exactly how much of each frequency exists inside a function.
 
@@ -537,9 +371,7 @@ a_m
 f(x)\cos(mx)\,dx
 $$
 
-This coefficient tells us:
-
-> how much cosine frequency \(m\) exists inside the signal.
+This coefficient tells us how much cosine frequency \(m\) exists inside the signal.
 
 ### Finding \(b_m\)
 
@@ -565,9 +397,7 @@ b_m
 f(x)\sin(mx)\,dx
 $$
 
-This coefficient measures:
-
-> how much sine frequency \(m\) exists in the function.
+This coefficient measures how much sine frequency \(m\) exists in the function.
 
 Finally,
 
@@ -587,15 +417,11 @@ Something profound has happened.
 
 We started with a messy function.
 
-We ended with:
-
-> a collection of frequencies.
+We ended with, a collection of frequencies.
 
 Fourier transformed geometry into vibration.
 
-Complicated motion became:
-
-> weighted oscillation.
+Complicated motion became weighted oscillation.
 
 But another question remains.
 
@@ -603,9 +429,7 @@ What happens if we keep adding more and more harmonics?
 
 Does the infinite series truly converge?
 
-And if it does:
-
-> how accurately?
+And if it does, how accurately?
 
 To answer that, we must discuss convergence.
 
@@ -615,9 +439,7 @@ To answer that, we must discuss convergence.
 
 Imagine trying to reconstruct a square wave using only smooth sine functions.
 
-At first:
-
-the approximation looks terrible.
+At first, the approximation looks terrible.
 
 Then we add more harmonics.
 
@@ -635,9 +457,7 @@ Yet something strange happens near discontinuities.
 
 Tiny oscillations appear.
 
-Even after adding infinitely many terms:
-
-> the overshoot never completely disappears.
+Even after adding infinitely many terms, the overshoot never completely disappears.
 
 This phenomenon is called the **Gibbs phenomenon**.
 
@@ -645,9 +465,7 @@ The oscillation becomes narrower.
 
 But its height approaches a fixed value.
 
-This teaches us an important lesson:
-
-> convergence is subtle.
+This teaches us an important lesson, convergence is subtle.
 
 Fourier series often converge beautifully.
 
@@ -716,9 +534,7 @@ It becomes the natural language of:
 * PDE theory
 * Fourier transforms
 
-The complex form reveals something deeper:
-
-> oscillation is naturally exponential.
+The complex form reveals something deeper, oscillation is naturally exponential.
 
 And waves are naturally complex.
 
@@ -747,17 +563,9 @@ $$
 
 This is called **Parseval’s identity**.
 
-The left-hand side measures:
+The left-hand side measures total signal energy; the right-hand side measures energy stored across harmonics.
 
-> total signal energy.
-
-The right-hand side measures:
-
-> energy stored across harmonics.
-
-This equation says something profound:
-
-> total energy equals harmonic energy.
+This equation says something profound, total energy equals harmonic energy.
 
 Nothing is lost.
 
@@ -772,9 +580,7 @@ This idea powers:
 
 Fourier series is not merely decomposition.
 
-It is:
-
-> conservation hidden inside oscillation.
+It is conservation hidden inside oscillation.
 
 ---
 
@@ -798,9 +604,7 @@ Machine learning.
 
 Communication systems.
 
-The deeper lesson is simple:
-
-> complicated structure often hides simple oscillation.
+The deeper lesson is simple: complicated structure often hides simple oscillation.
 
 Let us explore where this idea appears.
 
@@ -810,9 +614,7 @@ Let us explore where this idea appears.
 
 Ironically, Fourier did not invent Fourier series while studying sound.
 
-He was trying to understand:
-
-> how heat spreads through matter.
+He was trying to understand, how heat spreads through matter.
 
 Imagine heating one end of a metal rod.
 
@@ -822,9 +624,7 @@ Hot regions cool.
 
 Cold regions warm.
 
-The natural question becomes:
-
-> how does temperature evolve mathematically?
+The natural question becomes: how does temperature evolve mathematically?
 
 This problem is described by the **heat equation**:
 
@@ -846,21 +646,17 @@ At first glance, solving this equation looks terrifying.
 
 But Fourier discovered something remarkable.
 
-Instead of solving the entire problem directly:
-
-> decompose the temperature profile into simpler waves.
+Instead of solving the entire problem directly, decompose the temperature profile into simpler waves.
 
 Each harmonic evolves independently.
 
-The complicated temperature distribution becomes:
-
-> a weighted sum of simpler thermal modes.
+The complicated temperature distribution becomes a weighted sum of simpler thermal modes.
 
 This insight revolutionized mathematical physics.
 
 In many ways:
 
-> Fourier series was born from heat.
+Fourier series was born from heat.
 
 ---
 
@@ -870,17 +666,13 @@ Why does a violin sound different from a piano?
 
 Why does a flute sound different from a guitar?
 
-Even when playing:
-
-> the exact same musical note.
+Even when playing, the exact same musical note.
 
 The answer is harmonics.
 
 A musical tone is never just one frequency.
 
-Instead:
-
-> it is a superposition of frequencies.
+Instead, it is a superposition of frequencies.
 
 When a guitar string vibrates, it produces:
 
@@ -894,17 +686,13 @@ When a guitar string vibrates, it produces:
 
 Different instruments emphasize different harmonics.
 
-That harmonic fingerprint becomes:
-
-> timbre.
+That harmonic fingerprint becomes, timbre.
 
 The reason your brain instantly recognizes a piano versus a violin is not pitch.
 
 It is Fourier structure.
 
-In essence:
-
-> musical identity is frequency composition.
+In essence, musical identity is frequency composition.
 
 ---
 
@@ -912,9 +700,7 @@ In essence:
 
 Suppose you record audio.
 
-Unfortunately:
-
-> real-world signals are noisy.
+Unfortunately, real-world signals are noisy.
 
 Static appears.
 
@@ -934,9 +720,7 @@ Instead of viewing the signal in **time space**, we move into **frequency space*
 
 Noise often occupies specific frequency bands.
 
-By removing unwanted frequencies:
-
-> we remove noise.
+By removing unwanted frequencies, we remove noise.
 
 This idea powers:
 
@@ -946,13 +730,9 @@ This idea powers:
 * wireless communication
 * astronomy
 
-Fourier transforms allow engineers to ask:
+Fourier transforms allow engineers to ask, which frequencies matter?
 
-> which frequencies matter?
-
-Instead of:
-
-> what does the raw signal look like?
+Instead of, what does the raw signal look like?
 
 ---
 
@@ -966,15 +746,11 @@ Why can songs shrink dramatically?
 
 The answer lies in redundancy.
 
-Many signals contain:
-
-> unnecessary high-frequency information.
+Many signals contain, unnecessary high-frequency information.
 
 Human perception ignores much of it.
 
-Fourier decomposition reveals:
-
-> which frequencies matter most.
+Fourier decomposition reveals which frequencies matter most.
 
 Low-frequency components capture large-scale structure.
 
@@ -984,9 +760,7 @@ High-frequency components encode fine details.
   <div id="compression-wave"></div>
 </div>
 
-If tiny contributions barely matter:
-
-> we throw them away.
+If tiny contributions barely matter, we throw them away.
 
 This is the mathematical foundation behind:
 
@@ -994,9 +768,7 @@ This is the mathematical foundation behind:
 * MP3 audio compression
 * video codecs
 
-Compression is essentially:
-
-> intelligent frequency forgetting.
+Compression is essentially, intelligent frequency forgetting.
 
 ---
 
@@ -1006,13 +778,11 @@ One of the most surprising applications of Fourier analysis appears in medicine.
 
 MRI scanners do not directly photograph your body.
 
-Instead:
-
-> they measure frequency information.
+Instead, they measure frequency information.
 
 The scanner collects signals in something called:
 
-> **k-space**
+**k-space**
 
 At first glance, these measurements look meaningless.
 
@@ -1024,9 +794,7 @@ Only strange oscillatory patterns.
 
 Then Fourier reconstruction happens.
 
-Suddenly:
-
-> frequencies become structure.
+Suddenly, frequencies become structure.
 
 <div class="distill-figure">
   <div id="mri-fourier"></div>
@@ -1036,7 +804,7 @@ The human body emerges from oscillatory information.
 
 In a very real sense:
 
-> MRI is applied Fourier analysis.
+MRI is applied Fourier analysis.
 
 ---
 
@@ -1056,13 +824,9 @@ $$
 
 But position is not the only description.
 
-We may also describe the system in:
+We may also describe the system in, momentum space.
 
-> momentum space.
-
-The bridge between these descriptions is:
-
-> the Fourier transform.
+The bridge between these descriptions is the Fourier transform.
 
 Position and momentum are Fourier duals.
 
@@ -1083,9 +847,7 @@ This idea explains:
 * momentum eigenstates
 * scattering theory
 
-Fourier analysis becomes:
-
-> the geometry of quantum description.
+Fourier analysis becomes, the geometry of quantum description.
 
 A localized particle in position space becomes spread in momentum space.
 
@@ -1115,15 +877,11 @@ The general strategy is elegant:
 
 This transforms terrifying PDEs into manageable ordinary differential equations.
 
-Complicated dynamics become:
-
-> independent oscillatory pieces.
+Complicated dynamics become, independent oscillatory pieces.
 
 Separation of variables and Fourier analysis are deeply connected.
 
-In many ways:
-
-> mathematical physics is organized oscillation.
+In many ways, mathematical physics is organized oscillation.
 
 ---
 
@@ -1131,15 +889,11 @@ In many ways:
 
 Fourier methods are now reappearing in machine learning.
 
-Especially in:
-
-> scientific AI.
+Especially in, scientific AI.
 
 Classical neural networks struggle with partial differential equations.
 
-But newer approaches use:
-
-> spectral methods.
+But newer approaches use, spectral methods.
 
 Examples include:
 
@@ -1148,9 +902,7 @@ Examples include:
 * PDE solvers
 * physics-informed learning
 
-Instead of learning directly in coordinate space:
-
-> models learn in frequency space.
+Instead of learning directly in coordinate space, models learn in frequency space.
 
 This often improves:
 
@@ -1178,9 +930,7 @@ Chaotic vibration.
 
 Sometimes these are not fundamentally complicated at all.
 
-Instead:
-
-> they are simple oscillations layered together.
+Instead, they are simple oscillations layered together.
 
 A vibrating string.
 
@@ -1192,8 +942,6 @@ A quantum wavefunction.
 
 A neural operator.
 
-Each hides the same mathematical idea:
-
-> complexity emerging from harmonics.
+Each hides the same mathematical idea, complexity emerging from harmonics.
 
 That is the magic of Fourier series.
