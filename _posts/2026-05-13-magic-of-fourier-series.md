@@ -115,7 +115,7 @@ $$
 \sin(kx-\omega t)
 +
 \sin(kx+\omega t)
-=================
+=
 
 2\sin(kx)\cos(\omega t)
 $$
@@ -173,8 +173,6 @@ Fourier’s central idea is not merely computational. It is philosophical. Natur
 ---
 
 # II. Mathematical rigor
-
-# II. Mathematical Rigor
 
 The intuition behind Fourier series is compelling, but intuition alone is never enough. We now turn to the mathematical question itself:
 
@@ -328,7 +326,7 @@ giving
 
 $$
 f(x)\cos(mx)
-============
+=
 
 \frac{a_0}{2}\cos(mx)
 +
@@ -528,7 +526,7 @@ where
 
 $$
 c_n
-===
+=
 
 \frac{1}{2\pi}
 \int_{-\pi}^{\pi}
@@ -566,7 +564,7 @@ $$
 \frac{1}{\pi}
 \int_{-\pi}^{\pi}
 |f(x)|^2dx
-==========
+=
 
 \frac{a_0^2}{2}
 +
@@ -606,9 +604,6 @@ It is:
 
 ---
 
-# III. Applications
-
-````md id="0v9a1n"
 # III. Applications
 
 Fourier series is one of those rare mathematical ideas that quietly appears everywhere.
