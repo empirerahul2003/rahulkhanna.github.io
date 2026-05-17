@@ -24,6 +24,330 @@
               ]
             }
           }
-    </script> </d-front-matter> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/rahulkhanna.github.io/"> <span class="font-weight-bold">Rahul</span> K. Khanna </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/rahulkhanna.github.io/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/rahulkhanna.github.io/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/rahulkhanna.github.io/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/rahulkhanna.github.io/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/rahulkhanna.github.io/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" title="Search" onclick="openSearchModal()"> <span class="nav-link"><i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="post distill"> <d-title> <h1>The magic of Fourier series</h1> <p>How waves, interference, and harmonics combine to explain the mathematics of Fourier series. </p> </d-title> <d-article> <h1 id="the-magic-of-fourier-series">The Magic of Fourier Series</h1> <h2 id="how-complicated-motion-emerges-from-simple-waves">How complicated motion emerges from simple waves</h2> <p>Suppose you pluck a guitar string. For a brief moment, the string takes on a strange shape: it bends awkwardly and is neither smooth nor simple. Then it begins to move. The string vibrates, and the motion looks complicated—yet something curious happens. The vibration never feels random. A musician hears tone, a physicist sees oscillation, and a mathematician sees something stranger still: structure hidden beneath complexity.</p> <p>Hidden underneath the apparent chaos is a remarkable truth. Complicated motion often emerges from simple oscillations, and Fourier series is the mathematical language that explains why. But before discussing Fourier coefficients or infinite sums, we must understand something more fundamental: what waves actually do.</p> <hr> <h1 id="i-intuition">I. Intuition</h1> <h2 id="waves-that-move">Waves that move</h2> <p>Imagine holding one end of a rope and flicking it upward. A disturbance appears, then something remarkable happens: the disturbance moves, the shape survives, and only its position changes. This is called a <strong>traveling wave</strong>.</p> <div class="distill-figure"> <div id="traveling-wave"></div> </div> <p>At first glance, this motion seems obvious—of course waves move. But there is already a subtle mathematical idea hiding underneath. The wave is not continuously reinventing itself; instead, the same profile is translated through space.</p> <p>Mathematically, a traveling wave can be written as</p> \[u(x,t)=A\sin(kx-\omega t)\] <p>Let us unpack this slowly. The parameter (A) controls the <strong>amplitude</strong> and determines how large the oscillation becomes. The quantity (k) controls the <strong>wavelength</strong>; larger values produce tighter oscillations. The parameter (\omega) controls how rapidly the oscillation evolves in time.</p> <p>But the deeper point is this: the shape itself does not fundamentally change—only the position shifts. Traveling waves are motion with memory; the profile survives while moving. This idea matters because Fourier analysis ultimately decomposes complicated motion into combinations of such oscillatory patterns. But traveling waves are only half the story. Real strings have boundaries, and boundaries change everything.</p> <hr> <h2 id="when-motion-freezes">When motion freezes</h2> <p>Now imagine a guitar string. Unlike an infinitely long rope, both ends are fixed. You pluck it: a wave travels, reaches the boundary, and reflects. Soon another wave travels back, and the waves begin colliding with one another. Something surprising appears—the pattern seems frozen, not completely motionless but strangely stationary. The shape no longer travels across the string; instead, it oscillates in place.</p> <p>This is called a <strong>standing wave</strong>.</p> <div class="distill-figure"> <div id="standing-wave"></div> </div> <p>Look carefully. Some points never move—these are called <strong>nodes</strong>. Other points vibrate strongly; these are called <strong>antinodes</strong>.</p> <p>Unlike traveling waves, the spatial structure remains fixed.</p> <p>The mathematics changes form:</p> \[u(x,t)=A\sin(kx)\cos(\omega t)\] <p>Something remarkable has happened.</p> <p>The equation naturally separates into two pieces.</p> <p>One term determines shape in space; the other determines motion in time.</p> <p>This idea — separating a complicated problem into independent pieces — becomes one of the most powerful ideas in theoretical physics.</p> <p>It appears everywhere:</p> <ul> <li>heat conduction</li> <li>quantum mechanics</li> <li>electromagnetism</li> <li>acoustics</li> <li>wave equations</li> </ul> <p>But standing waves themselves are not fundamental.</p> <p>They emerge from something simpler.</p> <p>To understand why, we must talk about interference.</p> <hr> <h2 id="the-hidden-mechanism-interference">The hidden mechanism: interference</h2> <p>Why should a wave freeze in place?</p> <p>The answer is surprisingly elegant.</p> <p>Take one wave moving right.</p> <p>Take another moving left.</p> <p>Add them together.</p> <div class="distill-figure"> <div id="interference-wave"></div> </div> <p>Suddenly, something unexpected happens.</p> <p>The two waves combine to produce a standing wave.</p> <p>What once looked mysterious now becomes inevitable.</p> <p>Standing waves are not a separate species of motion.</p> <p>Instead, they are built from traveling waves.</p> <p>Mathematically,</p> \[\sin(kx-\omega t) + \sin(kx+\omega t) = 2\sin(kx)\cos(\omega t)\] <p>This identity explains everything.</p> <p>At nodes, destructive interference cancels motion perfectly.</p> <p>At antinodes, constructive interference amplifies oscillation.</p> <p>The structure emerges naturally.</p> <p>This explains:</p> <ul> <li>guitar strings</li> <li>violin harmonics</li> <li>organ pipes</li> <li>resonant cavities</li> <li>microwave oscillators</li> </ul> <p>But reality is still messier.</p> <p>A plucked string does not look like a clean sine wave.</p> <p>Its shape is awkward.</p> <p>Jagged.</p> <p>Irregular.</p> <p>So how can nature evolve such complicated motion?</p> <p>This question haunted nineteenth-century mathematics.</p> <p>Fourier proposed an astonishing answer.</p> <hr> <h2 id="fouriers-leap">Fourier’s leap</h2> <p>What if complicated shapes are not truly fundamental? What if complexity itself can be constructed? Fourier proposed something radical: any reasonable periodic shape can be represented as a sum of simpler oscillatory modes. In other words, complicated motion can emerge from simple vibrations.</p> <div class="distill-figure"> <div id="fourier-wave"></div> </div> <p>Move the slider, add harmonics, and watch the shape change. Something remarkable becomes visible: no single sine wave reproduces the signal, but many of them together begin approximating it. Sharp corners emerge, asymmetry appears, and complicated shapes slowly form. This is the central intuition behind Fourier series. Before moving into rigorous mathematics, pause here for a moment. Fourier’s idea says something profound: complexity may simply be layered simplicity.</p> <hr> <h1 id="ii-mathematical-rigor">II. Mathematical rigor</h1> <p>Suppose a function repeats itself after some period (T).</p> <p>Mathematically,</p> \[f(x+T)=f(x)\] <p>Such functions are called <strong>periodic functions</strong>.</p> <p>Examples appear everywhere:</p> <ul> <li>vibrating strings</li> <li>sound waves</li> <li>alternating electrical current</li> <li>planetary motion</li> <li>repeating temperature cycles</li> </ul> <p>Fourier proposed something astonishing.</p> <p>He claimed that many periodic functions could be written as</p> \[f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty} \left[ a_n\cos(nx) + b_n\sin(nx) \right]\] <p>At first glance, this looks unbelievable.</p> <p>Why should an arbitrary function — possibly ugly, asymmetric, or jagged — be expressible using only smooth trigonometric functions?</p> <p>The answer lies in one of the most beautiful ideas in mathematics:</p> <h2 id="orthogonality">Orthogonality</h2> <p>To understand Fourier series, we must first understand why sine and cosine functions are mathematically special.</p> <p>Think about ordinary vectors.</p> <p>In two-dimensional geometry,</p> \[(1,0) \qquad \text{and} \qquad (0,1)\] <p>are independent directions.</p> <p>Moving along one direction tells us nothing about the other.</p> <p>Their dot product vanishes:</p> \[(1,0)\cdot(0,1)=0\] <p>We call this relationship <strong>orthogonality</strong>.</p> <p>Something remarkably similar happens with trigonometric functions.</p> <p>Different sine waves behave like independent directions in function space.</p> <p>Mathematically,</p> \[\int_{-\pi}^{\pi} \sin(mx)\sin(nx)\,dx = 0 \qquad (m\neq n)\] <p>Similarly,</p> \[\int_{-\pi}^{\pi} \cos(mx)\cos(nx)\,dx = 0 \qquad (m\neq n)\] <p>And sine and cosine themselves are mutually orthogonal:</p> \[\int_{-\pi}^{\pi} \sin(mx)\cos(nx)\,dx = 0\] <p>This is the hidden mathematical miracle that makes Fourier series possible.</p> <p>Different harmonics do not interfere with one another.</p> <p>Each frequency behaves like an independent direction.</p> <p>This means, we can isolate each oscillatory mode separately.</p> <p>And that allows us to determine exactly how much of each frequency exists inside a function.</p> <hr> <h2 id="deriving-the-fourier-coefficients">Deriving the Fourier coefficients</h2> <p>Assume our periodic function can indeed be written as</p> \[f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty} \left( a_n\cos(nx) + b_n\sin(nx) \right)\] <p>But how do we determine the unknown coefficients?</p> <p>How do we find:</p> \[a_n \qquad \text{and} \qquad b_n\] <p>The strategy is elegant.</p> <p>We exploit orthogonality.</p> <h3 id="finding-a_m">Finding (a_m)</h3> <p>Multiply both sides by:</p> \[\cos(mx)\] <p>giving</p> \[f(x)\cos(mx) = \frac{a_0}{2}\cos(mx) + \sum_{n=1}^{\infty} \left( a_n\cos(nx)\cos(mx) + b_n\sin(nx)\cos(mx) \right)\] <p>Now integrate over one full period:</p> \[\int_{-\pi}^{\pi} f(x)\cos(mx)\,dx\] <p>Because of orthogonality:</p> <ul> <li>all sine terms vanish</li> <li>all cosine terms vanish</li> <li>except the one with (n=m)</li> </ul> <p>Everything collapses beautifully.</p> <p>We obtain:</p> \[a_m = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x)\cos(mx)\,dx\] <p>This coefficient tells us how much cosine frequency (m) exists inside the signal.</p> <h3 id="finding-b_m">Finding (b_m)</h3> <p>Now repeat the same trick.</p> <p>Multiply by:</p> \[\sin(mx)\] <p>Integrate over the interval.</p> <p>Orthogonality eliminates every unwanted term.</p> <p>The result becomes:</p> \[b_m = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x)\sin(mx)\,dx\] <p>This coefficient measures how much sine frequency (m) exists in the function.</p> <p>Finally,</p> \[a_0 = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x)\,dx\] <p>which represents the average value of the function.</p> <p>Together, these coefficients completely characterize the periodic signal.</p> <p>Something profound has happened.</p> <p>We started with a messy function.</p> <p>We ended with, a collection of frequencies.</p> <p>Fourier transformed geometry into vibration.</p> <p>Complicated motion became weighted oscillation.</p> <p>But another question remains.</p> <p>What happens if we keep adding more and more harmonics?</p> <p>Does the infinite series truly converge?</p> <p>And if it does, how accurately?</p> <p>To answer that, we must discuss convergence.</p> <hr> <h2 id="convergence-and-the-limits-of-approximation">Convergence and the limits of approximation</h2> <p>Imagine trying to reconstruct a square wave using only smooth sine functions.</p> <p>At first, the approximation looks terrible.</p> <p>Then we add more harmonics.</p> <p>The shape improves.</p> <p>Edges sharpen.</p> <p>The approximation becomes increasingly faithful.</p> <div class="distill-figure"> <div id="gibbs-wave"></div> </div> <p>Yet something strange happens near discontinuities.</p> <p>Tiny oscillations appear.</p> <p>Even after adding infinitely many terms, the overshoot never completely disappears.</p> <p>This phenomenon is called the <strong>Gibbs phenomenon</strong>.</p> <p>The oscillation becomes narrower.</p> <p>But its height approaches a fixed value.</p> <p>This teaches us an important lesson, convergence is subtle.</p> <p>Fourier series often converge beautifully.</p> <p>But not always in the way intuition first suggests.</p> <p>Under mild assumptions — known as the <strong>Dirichlet conditions</strong> — Fourier series converge to:</p> <ul> <li>the function itself (at smooth points)</li> <li>the average of left and right limits (at discontinuities)</li> </ul> <p>These conditions require:</p> <ul> <li>piecewise continuity</li> <li>finitely many extrema</li> <li>finitely many discontinuities</li> </ul> <p>Fortunately, most physical systems satisfy them.</p> <hr> <h2 id="the-complex-fourier-series">The complex Fourier series</h2> <p>So far we have used sines and cosines.</p> <p>But mathematics offers a cleaner formulation.</p> <p>Recall Euler’s formula:</p> \[e^{ix} = \cos x + i\sin x\] <p>This extraordinary identity unifies trigonometry and complex numbers.</p> <p>Using it, Fourier series can be rewritten compactly as</p> \[f(x) = \sum_{n=-\infty}^{\infty} c_n e^{inx}\] <p>where</p> \[c_n = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x)e^{-inx}\,dx\] <p>This form is elegant.</p> <p>But it is also powerful.</p> <p>It becomes the natural language of:</p> <ul> <li>quantum mechanics</li> <li>signal processing</li> <li>PDE theory</li> <li>Fourier transforms</li> </ul> <p>The complex form reveals something deeper, oscillation is naturally exponential.</p> <p>And waves are naturally complex.</p> <hr> <h2 id="parsevals-identity-conservation-of-energy">Parseval’s identity: conservation of energy</h2> <p>Fourier analysis hides another beautiful idea.</p> <p>Energy does not disappear.</p> <p>It merely redistributes among frequencies.</p> <p>Mathematically,</p> \[\frac{1}{\pi} \int_{-\pi}^{\pi} |f(x)|^2dx = \frac{a_0^2}{2} + \sum_{n=1}^{\infty} (a_n^2+b_n^2)\] <p>This is called <strong>Parseval’s identity</strong>.</p> <p>The left-hand side measures total signal energy; the right-hand side measures energy stored across harmonics.</p> <p>This equation says something profound, total energy equals harmonic energy.</p> <p>Nothing is lost.</p> <p>It merely spreads across frequencies.</p> <p>This idea powers:</p> <ul> <li>signal compression</li> <li>denoising</li> <li>filtering</li> <li>spectral analysis</li> </ul> <p>Fourier series is not merely decomposition.</p> <p>It is conservation hidden inside oscillation.</p> <hr> <h1 id="iii-applications">III. Applications</h1> <p>Fourier series is one of those rare mathematical ideas that appears almost everywhere.</p> <p>At first, it seems like a clever trick for rewriting periodic functions.</p> <p>But once you begin noticing frequencies hiding inside complicated signals, Fourier analysis starts appearing everywhere.</p> <p>Music.</p> <p>Heat flow.</p> <p>Quantum mechanics.</p> <p>Medical imaging.</p> <p>Machine learning.</p> <p>Communication systems.</p> <p>The deeper lesson is simple: complicated structure often hides simple oscillation.</p> <p>Let us explore where this idea appears.</p> <hr> <h2 id="the-historical-origin-heat-flow">The historical origin: heat flow</h2> <p>Ironically, Fourier did not invent Fourier series while studying sound.</p> <p>He was trying to understand, how heat spreads through matter.</p> <p>Imagine heating one end of a metal rod.</p> <p>Over time, the temperature changes.</p> <p>Hot regions cool.</p> <p>Cold regions warm.</p> <p>The natural question becomes: how does temperature evolve mathematically?</p> <p>This problem is described by the <strong>heat equation</strong>:</p> \[\frac{\partial u}{\partial t} = \alpha \frac{\partial^2 u}{\partial x^2}\] <p>Here:</p> <ul> <li>(u(x,t)) represents temperature</li> <li>(x) is position</li> <li>(t) is time</li> <li>(\alpha) controls thermal diffusion</li> </ul> <p>At first glance, solving this equation looks terrifying.</p> <p>But Fourier discovered something remarkable.</p> <p>Instead of solving the entire problem directly, decompose the temperature profile into simpler waves.</p> <p>Each harmonic evolves independently.</p> <p>The complicated temperature distribution becomes a weighted sum of simpler thermal modes.</p> <p>This insight revolutionized mathematical physics.</p> <p>In many ways:</p> <p>Fourier series was born from heat.</p> <hr> <h2 id="music-and-acoustics">Music and acoustics</h2> <p>Why does a violin sound different from a piano?</p> <p>Why does a flute sound different from a guitar?</p> <p>Even when playing, the exact same musical note.</p> <p>The answer is harmonics.</p> <p>A musical tone is never just one frequency.</p> <p>Instead, it is a superposition of frequencies.</p> <p>When a guitar string vibrates, it produces:</p> <ul> <li>a fundamental frequency</li> <li>higher harmonics</li> <li>overtone structure</li> </ul> <div class="distill-figure"> <div id="music-harmonics"></div> </div> <p>Different instruments emphasize different harmonics.</p> <p>That harmonic fingerprint becomes, timbre.</p> <p>The reason your brain instantly recognizes a piano versus a violin is not pitch.</p> <p>It is Fourier structure.</p> <p>In essence, musical identity is frequency composition.</p> <hr> <h2 id="signal-processing-and-noise-removal">Signal processing and noise removal</h2> <p>Suppose you record audio.</p> <p>Unfortunately, real-world signals are noisy.</p> <p>Static appears.</p> <p>Environmental interference enters.</p> <p>Electrical fluctuations contaminate the signal.</p> <p>At first glance, cleaning noise seems difficult.</p> <p>But Fourier analysis changes perspective.</p> <p>Instead of viewing the signal in <strong>time space</strong>, we move into <strong>frequency space</strong>.</p> <div class="distill-figure"> <div id="signal-filtering"></div> </div> <p>Noise often occupies specific frequency bands.</p> <p>By removing unwanted frequencies, we remove noise.</p> <p>This idea powers:</p> <ul> <li>audio enhancement</li> <li>speech recognition</li> <li>radar systems</li> <li>wireless communication</li> <li>astronomy</li> </ul> <p>Fourier transforms allow engineers to ask, which frequencies matter?</p> <p>Instead of, what does the raw signal look like?</p> <hr> <h2 id="image-compression-jpeg-and-mp3">Image compression: JPEG and MP3</h2> <p>Fourier analysis also explains compression.</p> <p>Why can massive images become tiny files?</p> <p>Why can songs shrink dramatically?</p> <p>The answer lies in redundancy.</p> <p>Many signals contain, unnecessary high-frequency information.</p> <p>Human perception ignores much of it.</p> <p>Fourier decomposition reveals which frequencies matter most.</p> <p>Low-frequency components capture large-scale structure.</p> <p>High-frequency components encode fine details.</p> <div class="distill-figure"> <div id="compression-wave"></div> </div> <p>If tiny contributions barely matter, we throw them away.</p> <p>This is the mathematical foundation behind:</p> <ul> <li>JPEG image compression</li> <li>MP3 audio compression</li> <li>video codecs</li> </ul> <p>Compression is essentially, intelligent frequency forgetting.</p> <hr> <h2 id="mri-and-medical-imaging">MRI and medical imaging</h2> <p>One of the most surprising applications of Fourier analysis appears in medicine.</p> <p>MRI scanners do not directly photograph your body.</p> <p>Instead, they measure frequency information.</p> <p>The scanner collects signals in something called:</p> <p><strong>k-space</strong></p> <p>At first glance, these measurements look meaningless.</p> <p>Not images.</p> <p>Not anatomy.</p> <p>Only strange oscillatory patterns.</p> <p>Then Fourier reconstruction happens.</p> <p>Suddenly, frequencies become structure.</p> <div class="distill-figure"> <div id="mri-fourier"></div> </div> <p>The human body emerges from oscillatory information.</p> <p>In a very real sense:</p> <p>MRI is applied Fourier analysis.</p> <hr> <h2 id="quantum-mechanics">Quantum mechanics</h2> <p>Fourier analysis appears naturally in quantum theory.</p> <p>This is not an accident.</p> <p>Quantum mechanics is fundamentally wave mechanics.</p> <p>A particle is described by a wavefunction:</p> \[\psi(x)\] <p>But position is not the only description.</p> <p>We may also describe the system in, momentum space.</p> <p>The bridge between these descriptions is the Fourier transform.</p> <p>Position and momentum are Fourier duals.</p> <p>Mathematically:</p> \[\psi(p) = \int \psi(x)e^{-ipx/\hbar} dx\] <p>This idea explains:</p> <ul> <li>uncertainty relations</li> <li>wave packets</li> <li>momentum eigenstates</li> <li>scattering theory</li> </ul> <p>Fourier analysis becomes, the geometry of quantum description.</p> <p>A localized particle in position space becomes spread in momentum space.</p> <p>And vice versa.</p> <p>This duality lies at the heart of quantum mechanics.</p> <hr> <h2 id="pdes-and-mathematical-physics">PDEs and mathematical physics</h2> <p>Many equations in physics become tractable through Fourier methods.</p> <p>Examples include:</p> <ul> <li>heat equation</li> <li>wave equation</li> <li>Schrödinger equation</li> <li>Maxwell equations</li> <li>fluid equations</li> </ul> <p>The general strategy is elegant:</p> <ol> <li>Decompose into modes.</li> <li>Solve each mode independently.</li> <li>Recombine the solution.</li> </ol> <p>This transforms terrifying PDEs into manageable ordinary differential equations.</p> <p>Complicated dynamics become, independent oscillatory pieces.</p> <p>Separation of variables and Fourier analysis are deeply connected.</p> <p>In many ways, mathematical physics is organized oscillation.</p> <hr> <h2 id="fourier-analysis-in-ai">Fourier analysis in AI</h2> <p>Fourier methods are now reappearing in machine learning.</p> <p>Especially in, scientific AI.</p> <p>Classical neural networks struggle with partial differential equations.</p> <p>But newer approaches use, spectral methods.</p> <p>Examples include:</p> <ul> <li>Fourier Neural Operators (FNOs)</li> <li>spectral transformers</li> <li>PDE solvers</li> <li>physics-informed learning</li> </ul> <p>Instead of learning directly in coordinate space, models learn in frequency space.</p> <p>This often improves:</p> <ul> <li>efficiency</li> <li>scalability</li> <li>physical generalization</li> </ul> <p>Fourier analysis continues evolving.</p> <p>Even after two centuries.</p> <hr> <h2 id="one-final-idea">One final idea</h2> <p>Fourier analysis teaches something unexpectedly philosophical.</p> <p>Complicated things are often simpler than they appear.</p> <p>Messy motion.</p> <p>Irregular signals.</p> <p>Chaotic vibration.</p> <p>Sometimes these are not fundamentally complicated at all.</p> <p>Instead, they are simple oscillations layered together.</p> <p>A vibrating string.</p> <p>A musical tone.</p> <p>An MRI image.</p> <p>A quantum wavefunction.</p> <p>A neural operator.</p> <p>Each hides the same mathematical idea, complexity emerging from harmonics.</p> <p>That is the magic of Fourier series.</p> </d-article> <d-appendix> <d-footnote-list></d-footnote-list> <d-citation-list></d-citation-list> </d-appendix> <d-bibliography src="/rahulkhanna.github.io/assets/bibliography/"></d-bibliography> <d-article> <br> <br> </d-article> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Rahul K. Khanna. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/rahulkhanna.github.io/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/overrides.js"></script> <script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js" integrity="sha256-1rA678n2xEx7x4cTZ5x4wpUCj6kUMZEZ5cxLSVSFWxw=" crossorigin="anonymous"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/distill-wave-common.js?v=3de12a60db4553744821d2b1ad644de9"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/traveling-wave.js?v=a38affad64514a7ca98534e63135d506"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/standing-wave.js?v=bd70a93040a7b873302a4e4e537f4c7d"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/interference.js?v=528755bfc2c3551695a9338db3079b45"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/fourier-decomposition.js?v=7e10c85067d851fcddf00dae01b73f1e"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/gibbs.js?v=dfccfe006060174a8df76e9b10647a85"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/music-harmonics.js?v=80d08280604f7d7660b39325133faa03"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/signal-filtering.js?v=7283a4cb557380cfa45e8670cc25ebca"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/compression-wave.js?v=73e0f86273b8c4d00477ca3d55043e22"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/mri-fourier.js?v=c067ec233b97b26f771c203cefaaadaf"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/orthogonality.js?v=79a0adeace7e356928ddf99c643da256"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/parseval.js?v=bce0dc9f15cfecfd92a84e76fc4b84d7"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/quantum-fourier.js?v=0a458eccdc60bbeb4eb54dc87334febe"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/rahulkhanna.github.io/assets/js/zoom.js?v=85ddb88934d28b74e78031fd54cf8308"></script> <script src="/rahulkhanna.github.io/assets/js/no_defer.js?v=2781658a0a2b13ed609542042a859126"></script> <script defer src="/rahulkhanna.github.io/assets/js/common.js?v=c15de51d4bb57887caa2c21988d97279"></script> <script defer src="/rahulkhanna.github.io/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/rahulkhanna.github.io/assets/js/jupyter_new_tab.js?v=d9f17b6adc2311cbabd747f4538bb15f"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/rahulkhanna.github.io/assets/js/mathjax-setup.js?v=a5bb4e6a542c546dd929b24b8b236dfd"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script defer src="/rahulkhanna.github.io/assets/js/progress-bar.js?v=2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script> <script src="/rahulkhanna.github.io/assets/js/vanilla-back-to-top.min.js?v=f40d453793ff4f64e238e420181a1d17"></script> <script>
+    </script> </d-front-matter> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/rahulkhanna.github.io/"> <span class="font-weight-bold">Rahul</span> K. Khanna </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/rahulkhanna.github.io/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/rahulkhanna.github.io/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/rahulkhanna.github.io/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/rahulkhanna.github.io/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/rahulkhanna.github.io/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" title="Search" onclick="openSearchModal()"> <span class="nav-link"><i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="post distill"> <d-title> <h1>The magic of Fourier series</h1> <p>How waves, interference, and harmonics combine to explain the mathematics of Fourier series. </p> </d-title> <d-article> <h1 id="i-intuition">I. Intuition</h1> <p>Suppose you pluck a guitar string. For a brief moment, the string takes on a strange shape: bent, asymmetric, and far from smooth. Then it begins to move. The string vibrates, the motion evolves, and yet something curious happens. Despite the apparent complexity, the vibration never feels random. A musician hears tone, a physicist sees oscillation, and a mathematician notices something deeper still: hidden structure.</p> <p>Beneath the complicated motion lies a remarkable truth:</p> <blockquote> <p>complicated motion often emerges from simple oscillations.</p> </blockquote> <p>Fourier series is the mathematical language that explains why. But before discussing coefficients, convergence, or infinite sums, we must first understand a more fundamental question:</p> <blockquote> <p>what do waves actually do?</p> </blockquote> <hr> <h2 id="waves-that-move">Waves that move</h2> <p>Imagine holding one end of a rope and flicking it upward. A disturbance appears, then begins moving across the rope. Something remarkable happens during this motion: the shape itself survives. The wave travels through space, yet its profile remains recognizable. Only its position changes.</p> <p>This type of motion is called a <strong>traveling wave</strong>.</p> <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"distill-figure"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"traveling-wave"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div> <p>At first glance, traveling waves seem obvious. Of course waves move—what could be surprising about that? Yet there is already a subtle mathematical idea hiding underneath. The wave is not continuously reinventing itself. Instead, the same profile shifts through space while preserving its overall structure.</p> <p>Mathematically, a traveling wave can be written as</p> \[u(x,t)=A\sin(kx-\omega t)\] <p>Each symbol carries physical meaning. The parameter (A) controls the <strong>amplitude</strong>, determining how large the oscillation becomes. The quantity (k) determines the <strong>wavelength</strong>, controlling how tightly packed the oscillations are. Finally, (\omega) determines how rapidly the wave evolves in time.</p> <p>The deeper lesson, however, is conceptual rather than algebraic. A traveling wave preserves information about its shape while moving. In a sense, it is motion with memory. This idea matters because Fourier analysis eventually decomposes complicated signals into combinations of such oscillatory patterns.</p> <p>But traveling waves are only half the story. Real physical systems have boundaries, and boundaries change everything.</p> <hr> <h2 id="when-motion-freezes">When motion freezes</h2> <p>Consider a guitar string. Unlike an infinitely long rope, the ends of the string are fixed. You pluck it, a wave travels outward, reaches the boundary, and reflects backward. Soon another reflected wave appears, and the string becomes filled with overlapping motion.</p> <p>Something surprising emerges.</p> <p>The pattern begins to look frozen.</p> <p>Not motionless, but strangely stationary. Instead of traveling across the string, the vibration appears trapped in place. Certain points remain fixed while others oscillate dramatically.</p> <p>This phenomenon is called a <strong>standing wave</strong>.</p> <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"distill-figure"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"standing-wave"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div> <p>If you observe carefully, some points never move at all. These are called <strong>nodes</strong>. Between them lie regions of maximum motion known as <strong>antinodes</strong>. Unlike traveling waves, the overall spatial structure no longer shifts through space. The pattern itself remains fixed while the amplitude changes with time.</p> <p>Mathematically, standing waves take the form</p> \[u(x,t)=A\sin(kx)\cos(\omega t)\] <p>Something profound has happened here. The equation naturally separates into two independent pieces. One term describes the spatial structure of the wave, while the other describes how that structure evolves in time.</p> <p>This separation of space and time is not merely a mathematical convenience. It becomes one of the most powerful ideas in theoretical physics, appearing throughout heat conduction, electromagnetism, acoustics, quantum mechanics, and the study of partial differential equations.</p> <p>Yet standing waves themselves are not fundamental. They emerge from something even simpler.</p> <p>To understand why, we must discuss interference.</p> <hr> <h2 id="the-hidden-mechanism-interference">The hidden mechanism: interference</h2> <p>Why should a wave suddenly appear frozen?</p> <p>The answer turns out to be beautifully simple.</p> <p>Imagine two identical traveling waves. One moves to the right, while the other moves to the left. When these waves overlap, they do not destroy one another. Instead, they combine according to the principle of <strong>superposition</strong>.</p> <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"distill-figure"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"interference-wave"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div> <p>Suddenly, the mystery disappears.</p> <p>Standing waves are not a separate type of motion at all. They are built from traveling waves moving in opposite directions.</p> <p>Mathematically,</p> \[\sin(kx-\omega t) + \sin(kx+\omega t) ================= 2\sin(kx)\cos(\omega t)\] <p>This identity explains the entire phenomenon. At some locations, destructive interference cancels the motion entirely, producing nodes. At others, constructive interference amplifies oscillation, producing antinodes. The frozen structure emerges naturally from the interaction of simpler moving waves.</p> <p>This idea explains much more than vibrating strings. It appears in violin harmonics, organ pipes, microwave cavities, resonant systems, and even optical interference experiments.</p> <p>But reality is still messier than perfect sine waves.</p> <p>A real plucked string does not vibrate as a clean mathematical oscillation. Its shape is jagged, irregular, and highly asymmetric. Yet somehow nature evolves this complicated motion with astonishing regularity.</p> <p>How is such complexity possible?</p> <p>This question haunted nineteenth-century mathematics.</p> <p>Fourier proposed a radical answer.</p> <hr> <h2 id="fouriers-leap">Fourier’s leap</h2> <p>What if complicated shapes are not truly fundamental?</p> <p>What if complexity itself can be constructed?</p> <p>Fourier proposed something astonishing:</p> <blockquote> <p>any reasonable periodic shape can be represented as a combination of simpler oscillatory modes.</p> </blockquote> <p>In other words, even an irregular vibration may be understood as a collection of simpler waves layered together.</p> <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"distill-figure"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"fourier-wave"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div> <p>Move the slider. Add harmonics. Watch the shape evolve.</p> <p>No single sine wave reproduces the signal. Yet as more oscillatory components are added, complicated structure begins to emerge. Sharp corners slowly appear, asymmetries form, and messy signals begin to take shape.</p> <p>The insight is extraordinary.</p> <p>A complicated vibration may not be fundamentally complicated at all.</p> <p>Instead:</p> <blockquote> <p>complexity may simply be layered simplicity.</p> </blockquote> <p>Before moving into rigorous mathematics, pause here for a moment.</p> <p>Fourier’s central idea is not merely computational. It is philosophical. Nature often hides simplicity beneath apparent complexity, and Fourier series gives us a way to reveal it.</p> <hr> <h1 id="ii-mathematical-rigor">II. Mathematical rigor</h1> <h1 id="ii-mathematical-rigor-1">II. Mathematical Rigor</h1> <p>The intuition behind Fourier series is compelling, but intuition alone is never enough. We now turn to the mathematical question itself:</p> <blockquote> <p>Can an arbitrary periodic function be represented as a combination of simple oscillatory modes?</p> </blockquote> <p>Suppose a function repeats after some fixed period (T). Mathematically, this means</p> \[f(x+T)=f(x)\] <p>Such functions are called <strong>periodic functions</strong>.</p> <p>Periodic behavior appears everywhere in physics. Vibrating strings repeat their motion, electrical currents oscillate in circuits, sound waves propagate rhythmically through air, and even planetary systems exhibit repeating structure. Fourier’s insight was to claim that these seemingly different systems could be understood through the same mathematical language.</p> <p>He proposed something astonishing:</p> <blockquote> <p>many periodic functions can be represented as sums of sines and cosines.</p> </blockquote> <p>The general form is</p> \[f(x) ==== \frac{a_0}{2} + \sum_{n=1}^{\infty} \left[ a_n\cos(nx) + b_n\sin(nx) \right]\] <p>At first glance, this looks almost unbelievable. Why should an arbitrary function—possibly jagged, asymmetric, or ugly—be reconstructible using only smooth trigonometric curves?</p> <p>The answer lies in one of the most beautiful ideas in mathematics:</p> <h2 id="orthogonality">Orthogonality</h2> <p>To understand Fourier series, we must first understand why sine and cosine functions are special.</p> <p>Consider ordinary vectors in geometry.</p> <p>The vectors</p> \[(1,0) \qquad \text{and} \qquad (0,1)\] <p>represent independent directions. Moving along one direction tells us nothing about the other. Their dot product vanishes,</p> \[(1,0)\cdot(0,1)=0\] <p>and we therefore call them <strong>orthogonal</strong>.</p> <p>Something remarkably similar happens with trigonometric functions.</p> <p>Instead of ordinary vectors, imagine functions themselves as directions in an abstract space. Different sine and cosine waves behave like independent axes.</p> <p>Mathematically,</p> \[\int_{-\pi}^{\pi} \sin(mx)\sin(nx),dx =================== 0 \qquad (m\neq n)\] <p>Likewise,</p> \[\int_{-\pi}^{\pi} \cos(mx)\cos(nx),dx =================== 0 \qquad (m\neq n)\] <p>Even sine and cosine are mutually orthogonal:</p> \[\int_{-\pi}^{\pi} \sin(mx)\cos(nx),dx =================== 0\] <p>This is the hidden mathematical miracle that makes Fourier analysis possible.</p> <p>Different harmonics do not interfere with one another. Each frequency behaves independently, allowing us to isolate oscillatory components one at a time.</p> <p>In essence:</p> <blockquote> <p>orthogonality allows us to separate complexity into independent pieces.</p> </blockquote> <p>Without this property, Fourier series would simply not work.</p> <hr> <h2 id="deriving-the-fourier-coefficients">Deriving the Fourier coefficients</h2> <p>Suppose our periodic function truly can be written as</p> \[f(x) ==== \frac{a_0}{2} + \sum_{n=1}^{\infty} \left( a_n\cos(nx) + b_n\sin(nx) \right)\] <p>The immediate question becomes:</p> <blockquote> <p>how do we determine the coefficients?</p> </blockquote> <p>How do we extract the hidden frequencies inside a complicated signal?</p> <p>The strategy is elegant.</p> <p>We exploit orthogonality.</p> <h3 id="finding-a_m">Finding (a_m)</h3> <p>Multiply both sides of the Fourier series by</p> \[\cos(mx)\] <p>giving</p> \[f(x)\cos(mx) ============ \frac{a_0}{2}\cos(mx) + \sum_{n=1}^{\infty} \left( a_n\cos(nx)\cos(mx) + b_n\sin(nx)\cos(mx) \right)\] <p>Now integrate over one full period:</p> \[\int_{-\pi}^{\pi} f(x)\cos(mx),dx\] <p>At first, the expression appears intimidating. But orthogonality performs something extraordinary.</p> <p>Every sine term vanishes.</p> <p>Every cosine term disappears.</p> <p>Except one.</p> <p>Only the term with</p> \[n=m\] <p>survives.</p> <p>Everything collapses beautifully into</p> \[a_m === \frac{1}{\pi} \int_{-\pi}^{\pi} f(x)\cos(mx),dx\] <p>This coefficient tells us:</p> <blockquote> <p>how much cosine frequency (m) exists inside the signal.</p> </blockquote> <h3 id="finding-b_m">Finding (b_m)</h3> <p>The procedure repeats almost identically.</p> <p>Multiply the Fourier series by</p> \[\sin(mx)\] <p>and integrate across one period.</p> <p>Orthogonality again eliminates every unwanted contribution, leaving</p> \[b_m === \frac{1}{\pi} \int_{-\pi}^{\pi} f(x)\sin(mx),dx\] <p>This coefficient measures:</p> <blockquote> <p>how much sine frequency (m) exists in the function.</p> </blockquote> <p>Finally, the constant term becomes</p> \[a_0 === \frac{1}{\pi} \int_{-\pi}^{\pi} f(x),dx\] <p>which represents the average value of the signal.</p> <p>Something profound has happened.</p> <p>We began with a messy function.</p> <p>We ended with:</p> <blockquote> <p>a collection of frequencies.</p> </blockquote> <p>Fourier transformed geometry into vibration.</p> <p>Complicated motion became weighted oscillation.</p> <p>But another question naturally arises.</p> <p>If we keep adding harmonics forever:</p> <blockquote> <p>does the infinite series actually converge?</p> </blockquote> <p>And if it converges:</p> <blockquote> <p>how accurately?</p> </blockquote> <hr> <h2 id="convergence-and-the-limits-of-approximation">Convergence and the limits of approximation</h2> <p>Imagine trying to reconstruct a square wave using only smooth sine functions.</p> <p>At first, the approximation looks terrible.</p> <p>The edges are rounded.</p> <p>The shape feels incomplete.</p> <p>But then we add more harmonics.</p> <p>Suddenly, the approximation improves. Corners sharpen. Structure emerges. The signal begins looking increasingly faithful to the original.</p> <p>```html id=”xry0hh”</p> <div class="distill-figure"> <div id="gibbs-wave"></div> </div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Yet something strange happens near discontinuities.
+
+Small oscillations appear.
+
+Even after adding infinitely many terms:
+
+&gt; the overshoot never fully disappears.
+
+This curious behavior is called the **Gibbs phenomenon**.
+
+The oscillatory region becomes narrower as more harmonics are added, but the height of the overshoot approaches a fixed value rather than vanishing completely.
+
+This teaches an important lesson:
+
+&gt; convergence is subtle.
+
+Fourier series often converge beautifully, but not always in the way intuition initially expects.
+
+Under mild assumptions—known as the **Dirichlet conditions**—Fourier series converge to:
+
+* the function itself at smooth points
+* the average of left and right limits at discontinuities
+
+These conditions require:
+
+* piecewise continuity
+* finitely many extrema
+* finitely many discontinuities
+
+Fortunately, most physical systems satisfy these assumptions.
+
+---
+
+## The complex Fourier series
+
+So far, we have expressed periodic functions using sines and cosines.
+
+But mathematics offers something cleaner.
+
+Recall Euler’s extraordinary identity:
+
+$$
+e^{ix}
+======
+
+\cos x
++
+i\sin x
+$$
+
+This equation unifies trigonometry and complex numbers in a surprisingly elegant way.
+
+Using Euler’s formula, Fourier series can be rewritten compactly as
+
+$$
+f(x)
+====
+
+\sum_{n=-\infty}^{\infty}
+c_n e^{inx}
+$$
+
+where
+
+$$
+c_n
+===
+
+\frac{1}{2\pi}
+\int_{-\pi}^{\pi}
+f(x)e^{-inx},dx
+$$
+
+At first glance, this may appear more abstract than the trigonometric version. In practice, however, it is often far more elegant and computationally convenient.
+
+This formulation becomes the natural language of:
+
+* quantum mechanics
+* signal processing
+* PDE theory
+* Fourier transforms
+
+The deeper insight is philosophical.
+
+Oscillation is naturally exponential.
+
+Waves are naturally complex.
+
+---
+
+## Parseval’s identity: conservation of energy
+
+Fourier analysis hides one final surprise.
+
+Energy does not disappear.
+
+It merely redistributes across frequencies.
+
+Mathematically,
+
+$$
+\frac{1}{\pi}
+\int_{-\pi}^{\pi}
+|f(x)|^2dx
+==========
+
+\frac{a_0^2}{2}
++
+\sum_{n=1}^{\infty}
+(a_n^2+b_n^2)
+$$
+
+This equation is known as **Parseval’s identity**.
+
+The left-hand side measures the total energy of the signal.
+
+The right-hand side measures energy stored across harmonics.
+
+Remarkably, the two are exactly equal.
+
+This means:
+
+&gt; total signal energy equals harmonic energy.
+
+Nothing is lost.
+
+It simply redistributes across frequencies.
+
+This idea powers modern techniques in:
+
+* signal compression
+* denoising
+* spectral analysis
+* filtering
+
+Fourier series is therefore not merely decomposition.
+
+It is:
+
+&gt; conservation hidden inside oscillation.
+
+
+---
+
+# III. Applications
+
+````md id="0v9a1n"
+# III. Applications
+
+Fourier series is one of those rare mathematical ideas that quietly appears everywhere.
+
+At first, it may seem like a clever trick for rewriting periodic functions. But once you begin recognizing hidden frequencies inside complicated motion, Fourier analysis starts appearing in places that seem completely unrelated: heat diffusion, music, quantum mechanics, medical imaging, communication systems, and even modern machine learning.
+
+The deeper lesson is simple:
+
+&gt; complicated structure often hides simple oscillation.
+
+To understand why Fourier analysis became one of the most important ideas in science, we now turn to the problems that made it indispensable.
+
+---
+
+## Heat and the birth of Fourier analysis
+
+Ironically, Fourier did not invent Fourier series while studying sound or waves.
+
+He was trying to solve a far more practical question:
+
+&gt; how does heat spread through matter?
+
+Imagine heating one end of a metal rod.
+
+Initially, the temperature distribution is highly uneven. One region is hot while another remains cold. Over time, however, something curious happens. The sharp differences begin smoothing out. Heat spreads naturally, gradually erasing temperature irregularities.
+
+But how can we predict this evolution mathematically?
+
+This question leads to one of the most important equations in mathematical physics:
+
+:contentReference[oaicite:0]{index=0}
+
+Here:
+
+- \(u(x,t)\) describes temperature
+- \(x\) represents position
+- \(t\) represents time
+- \(\alpha\) controls thermal diffusivity
+
+At first glance, the equation looks intimidating.
+
+It describes how temperature changes in time based on how curved the temperature profile is in space. Regions with strong temperature gradients evolve rapidly, while smoother regions change slowly.
+
+The problem appears difficult because temperature may initially have an arbitrary shape.
+
+Perhaps the rod begins hot in the center.
+
+Perhaps only one side is heated.
+
+Perhaps the profile is jagged and irregular.
+
+How could we possibly solve such a general problem?
+
+Fourier’s answer was astonishingly elegant.
+
+Instead of solving the entire complicated temperature profile directly:
+
+&gt; decompose it into simpler modes.
+
+Assume the temperature separates into independent spatial and temporal parts:
+
+$$
+u(x,t)=X(x)T(t)
+$$
+
+This seemingly innocent assumption changes everything.
+
+Substituting into the heat equation yields:
+
+$$
+X(x)\frac{dT}{dt}
+=
+\alpha
+T(t)
+\frac{d^2X}{dx^2}
+$$
+
+Dividing through by \(XT\) gives
+
+$$
+\frac{1}{T}
+\frac{dT}{dt}
+=
+\alpha
+\frac{1}{X}
+\frac{d^2X}{dx^2}
+=
+-\lambda
+$$
+
+Suddenly, one terrifying PDE becomes:
+
+&gt; two simpler ordinary differential equations.
+
+The spatial solution becomes
+
+$$
+X_n(x)
+=
+\sin
+\left(
+\frac{n\pi x}{L}
+\right)
+$$
+
+while the temporal evolution becomes
+
+$$
+T_n(t)
+=
+e^{-\alpha (n\pi/L)^2t}
+$$
+
+Combining them gives
+
+$$
+u(x,t)
+=
+\sum_{n=1}^{\infty}
+A_n
+\sin
+\left(
+\frac{n\pi x}{L}
+\right)
+e^{-\alpha(n\pi/L)^2t}
+$$
+
+This equation is extraordinary.
+
+A messy temperature profile becomes:
+
+&gt; a collection of harmonics.
+
+Each harmonic evolves independently.
+
+Even more interestingly:
+
+&gt; higher harmonics decay faster.
+
+Notice the exponential factor:
+
+$$
+e^{-\alpha(n\pi/L)^2t}
+$$
+
+As \(n\) increases, decay becomes stronger.
+
+Physically, this means:
+
+- sharp features disappear first
+- fine-scale structure fades rapidly
+- smooth behavior survives longest
+
+Heat naturally destroys complexity.
+
+Irregularity slowly dissolves into smoothness.
+
+```html
+&lt;div class="distill-figure"&gt;
+  &lt;div id="heat-fourier"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div></div> <p>This insight was revolutionary.</p> <p>Fourier showed that complicated evolution could be understood through independent oscillatory modes.</p> <p>In many ways:</p> <blockquote> <p>Fourier analysis was born from heat.</p> </blockquote> <hr> <h2 id="music-harmonics-and-why-instruments-sound-different">Music, harmonics, and why instruments sound different</h2> <p>Imagine hearing a piano and a violin play exactly the same note.</p> <p>The pitch is identical.</p> <p>The frequency may even be the same.</p> <p>Yet your brain immediately recognizes the difference.</p> <p>Why?</p> <p>The answer is hidden in harmonics.</p> <p>A musical note is never a single frequency.</p> <p>Instead:</p> <blockquote> <p>it is a superposition of frequencies.</p> </blockquote> <p>Suppose the fundamental oscillation has angular frequency $\omega$.</p> <p>The resulting sound may be written as</p> \[f(t) ==== A_1\sin(\omega t) + A_2\sin(2\omega t) + A_3\sin(3\omega t) +\cdots\] <p>Each term contributes a different harmonic.</p> <p>The first harmonic determines the dominant pitch.</p> <p>Higher harmonics shape the sound.</p> <p>They determine texture.</p> <p>Richness.</p> <p>Brightness.</p> <p>Warmth.</p> <p>Together, these subtle contributions create something musicians call:</p> <blockquote> <p>timbre.</p> </blockquote> <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"distill-figure"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"music-harmonics"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div> <p>This explains why instruments feel different even while playing the same note.</p> <p>A violin strongly emphasizes certain harmonics.</p> <p>A flute suppresses many higher frequencies.</p> <p>A guitar produces a different overtone structure altogether.</p> <p>Mathematically, they are simply:</p> <blockquote> <p>different Fourier spectra.</p> </blockquote> <p>The waveform itself may look complicated in time space.</p> <p>But once decomposed into harmonics:</p> <blockquote> <p>structure appears.</p> </blockquote> <p>Fourier analysis reveals the hidden fingerprint of sound.</p> <p>This idea powers:</p> <ul> <li>digital synthesizers</li> <li>instrument analysis</li> <li>speech recognition</li> <li>audio engineering</li> <li>acoustic design</li> </ul> <p>Even human hearing behaves spectrally.</p> <p>The cochlea inside the ear performs something remarkably close to frequency decomposition, separating sound into bands before neural processing begins.</p> <p>In a very real sense:</p> <blockquote> <p>your brain is already doing Fourier analysis.</p> </blockquote> <p>But sound is only the beginning.</p> <p>Modern technology relies on Fourier analysis not merely to understand signals—</p> <blockquote> <p>but to manipulate them.</p> </blockquote> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div> </d-article> <d-appendix> <d-footnote-list></d-footnote-list> <d-citation-list></d-citation-list> </d-appendix> <d-bibliography src="/rahulkhanna.github.io/assets/bibliography/"></d-bibliography> <d-article> <br> <br> </d-article> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Rahul K. Khanna. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/rahulkhanna.github.io/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/overrides.js"></script> <script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js" integrity="sha256-1rA678n2xEx7x4cTZ5x4wpUCj6kUMZEZ5cxLSVSFWxw=" crossorigin="anonymous"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/distill-wave-common.js?v=3de12a60db4553744821d2b1ad644de9"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/traveling-wave.js?v=a38affad64514a7ca98534e63135d506"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/standing-wave.js?v=bd70a93040a7b873302a4e4e537f4c7d"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/interference.js?v=528755bfc2c3551695a9338db3079b45"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/fourier-decomposition.js?v=7e10c85067d851fcddf00dae01b73f1e"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/gibbs.js?v=dfccfe006060174a8df76e9b10647a85"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/music-harmonics.js?v=80d08280604f7d7660b39325133faa03"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/signal-filtering.js?v=7283a4cb557380cfa45e8670cc25ebca"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/compression-wave.js?v=73e0f86273b8c4d00477ca3d55043e22"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/mri-fourier.js?v=c067ec233b97b26f771c203cefaaadaf"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/orthogonality.js?v=79a0adeace7e356928ddf99c643da256"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/parseval.js?v=bce0dc9f15cfecfd92a84e76fc4b84d7"></script> <script src="/rahulkhanna.github.io/assets/js/distillpub/quantum-fourier.js?v=0a458eccdc60bbeb4eb54dc87334febe"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/rahulkhanna.github.io/assets/js/zoom.js?v=85ddb88934d28b74e78031fd54cf8308"></script> <script src="/rahulkhanna.github.io/assets/js/no_defer.js?v=2781658a0a2b13ed609542042a859126"></script> <script defer src="/rahulkhanna.github.io/assets/js/common.js?v=c15de51d4bb57887caa2c21988d97279"></script> <script defer src="/rahulkhanna.github.io/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/rahulkhanna.github.io/assets/js/jupyter_new_tab.js?v=d9f17b6adc2311cbabd747f4538bb15f"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/rahulkhanna.github.io/assets/js/mathjax-setup.js?v=a5bb4e6a542c546dd929b24b8b236dfd"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script defer src="/rahulkhanna.github.io/assets/js/progress-bar.js?v=2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script> <script src="/rahulkhanna.github.io/assets/js/vanilla-back-to-top.min.js?v=f40d453793ff4f64e238e420181a1d17"></script> <script>
     addBackToTop();
   </script> <script type="module" src="/rahulkhanna.github.io/assets/js/search/ninja-keys.min.js?v=a3446f084dcaecc5f75aa1757d087dcf"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/rahulkhanna.github.io/assets/js/search-setup.js?v=6c304f7b1992d4b60f7a07956e52f04a"></script> <script src="/rahulkhanna.github.io/assets/js/search-data.js"></script> <script src="/rahulkhanna.github.io/assets/js/shortcut-key.js?v=ccc841c459bfc0e64c1c2b5acd10df02"></script> </body> </html>
