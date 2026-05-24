@@ -13,11 +13,11 @@ distill_wave_viz: true
 ---
 
 # Can Quantum Advantage Survive Reality?
-### Understanding Fault-Tolerant Quantum Advantage on Hypercube Architectures
+## Understanding Fault-Tolerant Quantum Advantage on Hypercube Architectures
 
 Quantum computers promise something extraordinary. For certain problems, they may eventually outperform even the best classical supercomputers. At first sight, this sounds simple:
 
-> build more qubits.
+**build more qubits.**
 
 The real challenge, however, is not the number of qubits.
 
@@ -69,7 +69,7 @@ This raises a natural question: if universal fault-tolerant quantum computing re
 
 This question lies at the heart of recent work by Dominik Hangleiter and collaborators. Instead of pursuing arbitrary quantum computation, the paper asks a different question:
 
-> What kinds of computationally hard quantum tasks naturally survive realistic hardware constraints?
+**What kinds of computationally hard quantum tasks naturally survive realistic hardware constraints?**
 
 The answer combines restricted quantum circuits, fault-tolerant codes, hypercube geometries, and reconfigurable neutral-atom hardware into a surprisingly coherent framework.
 
@@ -80,7 +80,7 @@ Before seeing why this approach works, we first need to understand why fault-tol
 
 If noise is the central problem, an obvious solution immediately appears.
 
-> Why not simply correct the errors?
+ Why not simply correct the errors?
 
 This idea lies behind **quantum error correction (QEC)**, one of the most important ideas in modern quantum computing. The central goal is simple: instead of storing information inside one fragile physical qubit, distribute it across many qubits so that errors can be detected and corrected.
 
@@ -169,7 +169,7 @@ Do we really need a fully universal quantum computer in order to achieve quantum
 
 Surprisingly, the answer may be:
 
-> No.
+ No.
 
 This is one of the central conceptual ideas behind the paper.
 
@@ -319,13 +319,13 @@ designing the algorithm, the code, and the hardware together from the start.
 
 At this point, the strategy behind the paper begins to take shape. IQP circuits appear attractive because they occupy a useful middle ground. They are far more structured than fully universal quantum computation, yet still appear difficult for classical computers to simulate. However, an important challenge remains: even restricted quantum circuits must still survive noise. This raises the central question of the paper:
 
-> How can computationally hard quantum circuits be realized without paying the enormous cost of universal fault tolerance?
+**How can computationally hard quantum circuits be realized without paying the enormous cost of universal fault tolerance?**
 
 The traditional approach to quantum computing usually follows a simple logic. First, design an abstract quantum algorithm. Then, attempt to force real hardware to implement it. In practice, this often becomes painful. Real quantum processors have limited connectivity, certain operations are expensive, and quantum error correction introduces substantial overhead. Elegant theoretical circuits and realistic hardware often end up speaking very different languages.
 
 The central idea of this paper is surprisingly different. Instead of treating the algorithm, hardware, and error correction separately, the authors design them together from the start. They call this idea **fault-tolerant compiling**. Rather than asking how hardware can imitate arbitrary computation, the paper asks a more practical question:
 
-> What kinds of computationally hard quantum circuits naturally fit realistic hardware?
+**What kinds of computationally hard quantum circuits naturally fit realistic hardware?**
 
 The answer combines three ingredients that work unusually well together: **IQP circuits**, which remain classically hard despite their restricted structure; **hypercube quantum codes**, chosen because they naturally support the required operations; and **neutral atom hardware**, where atoms can physically move and interactions become reconfigurable.
 
@@ -459,13 +459,13 @@ The authors solve this problem in a surprisingly physical way:
 
 At this point, the paper has assembled several ideas that fit together naturally. IQP circuits provide a restricted but classically hard computational model, hypercube codes support fault-tolerant operations, and transversal gates help keep errors local. Yet one practical challenge still remains:
 
-> How can distant qubits interact efficiently?
+**How can distant qubits interact efficiently?**
 
 In many quantum architectures, this quickly becomes expensive. If two far-away qubits must interact, information often travels indirectly through intermediate qubits, increasing circuit depth and noise. More operations mean more opportunities for errors, which is precisely the problem fault tolerance is trying to control.
 
 The authors take a surprisingly different approach. Instead of moving information through the processor, they exploit a unique feature of **neutral atom hardware**:
 
-> atoms can physically move.
+**atoms can physically move.**
 
 Rather than forcing distant qubits to communicate indirectly, the processor rearranges atoms so that desired interactions become local. In effect, geometry itself becomes programmable.
 
@@ -492,7 +492,7 @@ At this point, however, an important question naturally appears: if the geometry
 
 At this point, the proposal may begin to sound almost too good to be true. The circuits are highly structured, the geometry is carefully chosen, and even the quantum error-correcting code has been designed to match the architecture. This raises an important concern:
 
-> Has the computation become *too structured*?
+**Has the computation become *too structured*?**
 
 Quantum computing has taught an important lesson: not every quantum circuit is difficult for classical computers to simulate. Some surprisingly complicated circuits still turn out to be classically manageable. The challenge is therefore subtle. IQP circuits were already believed to be hard to simulate, but after introducing fault-tolerant encoding, hypercube geometry, transversal operations, and atom rearrangements, one might naturally wonder whether the problem has accidentally become easier.
 
@@ -554,7 +554,7 @@ Surprisingly, the answer involves an unexpected connection to **statistical mech
 
 One of the more interesting technical contributions of the paper appears through an unexpected connection:
 
-> statistical mechanics.
+**statistical mechanics.**
 
 At first sight, IQP circuits may seem difficult to analyze directly. Even though their gates commute, the probability distributions they generate quickly become complicated. For a system with many qubits, the number of possible measurement outcomes grows exponentially, making direct analysis increasingly difficult.
 
@@ -617,7 +617,7 @@ Demonstrating quantum advantage is only part of the challenge.
 
 An equally important question remains:
 
-> How do we verify that a quantum device is actually performing the intended computation?
+**How do we verify that a quantum device is actually performing the intended computation?**
 
 This becomes difficult because once a quantum circuit is hard to simulate classically, direct verification also becomes hard. One cannot simply calculate the correct answer and compare outputs.
 
@@ -646,7 +646,7 @@ The road toward useful quantum computing is often framed as a race toward univer
 
 Instead of forcing arbitrary computations onto imperfect hardware, the authors ask a more practical question:
 
-> What kinds of computationally hard quantum tasks naturally fit realistic architectures?
+**What kinds of computationally hard quantum tasks naturally fit realistic architectures?**
 
 The answer explored here combines **IQP circuits**, **hypercube quantum codes**, and **reconfigurable neutral atom hardware** into a surprisingly coherent framework. The result is not a universal quantum computer, nor does it attempt to be. Instead, it represents something perhaps equally valuable: a realistic route toward **fault-tolerant quantum advantage**.
 
