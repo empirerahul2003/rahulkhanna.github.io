@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/rahulkhanna.github.io/cv/";
           },
-        },{id: "post-the-magic-of-fourier-series",
+        },{id: "post-ftqc-complier-co-design",
+        
+          title: "FTQC complier co-design",
+        
+        description: "Fault-Tolerant Compiling of Classically Hard Instantaneous Quantum Polynomial Circuits on Hypercubes",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/rahulkhanna.github.io/blog/2026/FTQC-compliler-co-design/";
+          
+        },
+      },{id: "post-the-magic-of-fourier-series",
         
           title: "The magic of Fourier series",
         
