@@ -63,7 +63,7 @@ ninja.data = [{
         
           title: "P vs NP",
         
-        description: "what makes problem hard",
+        description: "The Strange Difference Between Finding and Checking",
         section: "Posts",
         handler: () => {
           
