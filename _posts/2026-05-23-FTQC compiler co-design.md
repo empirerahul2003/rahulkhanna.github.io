@@ -47,9 +47,7 @@ This question lies at the heart of recent work by Dominik Hangleiter and collabo
 
 **What kinds of computationally hard quantum tasks naturally survive realistic hardware constraints?**
 
-The answer combines restricted quantum circuits, fault-tolerant codes, hypercube geometries, and reconfigurable neutral-atom hardware into a surprisingly coherent framework.
-
-Before seeing why this approach works, we first need to understand why fault-tolerant quantum computing is considered so expensive.
+The answer combines restricted quantum circuits, fault-tolerant codes, hypercube geometries, and reconfigurable neutral-atom hardware into a surprisingly coherent framework. Before seeing why this approach works, we first need to understand why fault-tolerant quantum computing is considered so expensive.
 
 
 # Why Universal Fault-Tolerant Quantum Computing Is So Expensive
@@ -191,24 +189,14 @@ $$
 $$
 
 This means the order of operations no longer matters. In a sense, the computation can be viewed as happening “all at once,” which explains the word *instantaneous*.
-
-At first sight, this may sound disappointing.
-
-If everything commutes, should simulation not become easy?
-
-Surprisingly, the answer appears to be no.
-
+At first sight, this may sound disappointing. If everything commutes, should simulation not become easy? Surprisingly, the answer appears to be no.
 Even though IQP circuits are highly restricted, they still generate probability distributions that seem difficult for classical computers to reproduce.
 
 To understand why, it helps to distinguish between two very different computational tasks.
 
 A **decision problem** asks for a specific answer. For example:
 
-> Is this number prime?
-
-The output is ultimately:
-
-> yes or no.
+ Is this number prime? The output is ultimately:  yes or no.
 
 Quantum sampling works differently.
 
