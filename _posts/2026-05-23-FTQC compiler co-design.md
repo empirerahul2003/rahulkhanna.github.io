@@ -82,20 +82,10 @@ $$
 
 The subscript $L$ stands for *logical*.
 
-This seemingly small change transforms how information is stored. A logical qubit no longer belongs to a single atom or circuit element. Instead, information becomes distributed collectively across many physical qubits.
-
-This spreading provides protection.
+This seemingly small change transforms how information is stored. A logical qubit no longer belongs to a single atom or circuit element. Instead, information becomes distributed collectively across many physical qubits. This spreading provides protection.
 
 If one physical qubit suffers an error, information is not immediately lost because it is encoded globally rather than locally.
-
-At first sight, this sounds ideal.
-
-Unfortunately, there is a price.
-
-Quantum error correction is expensive.
-
-Very expensive.
-
+At first sight, this sounds ideal. Unfortunately, there is a price. Quantum error correction is expensive. Very expensive.
 A useful logical qubit may require hundreds or thousands of physical qubits, depending on error rates and computational requirements. In practice, this means that a machine with
 
 $$
@@ -111,15 +101,12 @@ $$
 or more physical qubits.
 
 The challenge becomes even harder when we consider quantum gates.
-
 Some operations are relatively easy to implement fault tolerantly. Others are not.
-
 This is one of the reasons universal quantum computation becomes expensive.
 
 Certain operations needed for universal quantum algorithms introduce enormous overhead, increasing both hardware requirements and circuit depth. More gates mean more opportunities for noise, which pushes error correction requirements even further.
 
 The road toward universal fault-tolerant quantum computing therefore becomes extraordinarily costly.
-
 This naturally raises another question.
 
 Do we really need a fully universal quantum computer to demonstrate quantum advantage?
@@ -127,7 +114,6 @@ Do we really need a fully universal quantum computer to demonstrate quantum adva
 Or could a more restricted form of quantum computation already outperform classical machines while remaining dramatically cheaper to implement?
 
 This question leads directly to one of the central ideas of the paper.
-
 Instead of pursuing the most powerful possible quantum computer, what if we searched for the *simplest kind of quantum computation that still remains classically hard*?
 
 
