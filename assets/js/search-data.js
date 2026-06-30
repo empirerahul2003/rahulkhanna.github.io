@@ -48,17 +48,6 @@ ninja.data = [{
             window.location.href = "/rahulkhanna.github.io/blog/2026/FTQC-compiler-co-design/";
           
         },
-      },{id: "post-the-magic-of-fourier-series",
-        
-          title: "The magic of Fourier series",
-        
-        description: "How waves, interference, and harmonics combine to explain the mathematics of Fourier series.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/rahulkhanna.github.io/blog/2026/magic-of-fourier-series/";
-          
-        },
       },{id: "post-p-vs-np",
         
           title: "P vs NP",
@@ -68,6 +57,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/rahulkhanna.github.io/blog/2026/P-vs-NP/";
+          
+        },
+      },{id: "post-the-magic-of-fourier-series",
+        
+          title: "The magic of Fourier series",
+        
+        description: "How waves, interference, and harmonics combine to explain the mathematics of Fourier series.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/rahulkhanna.github.io/blog/2026/magic-of-fourier-series/";
           
         },
       },{id: "books-the-godfather",
