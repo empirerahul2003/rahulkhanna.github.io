@@ -627,6 +627,7 @@ More broadly, the work hints at an important shift in thinking. The future of sc
 In that sense, the deepest contribution of this work may not simply be a new sampling architecture.
 
 It may be a new way of thinking about quantum computation itself.
+
 ---
 ## References
 
