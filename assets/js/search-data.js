@@ -45,7 +45,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/rahulkhanna.github.io/blog/2026/FTQC-compliler-co-design/";
+            window.location.href = "/rahulkhanna.github.io/blog/2026/FTQC-compiler-co-design/";
           
         },
       },{id: "post-the-magic-of-fourier-series",
