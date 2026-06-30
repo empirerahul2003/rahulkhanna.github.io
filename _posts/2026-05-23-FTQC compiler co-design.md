@@ -41,13 +41,6 @@ $$
 
 In other words, we are still millions of times away from large-scale fault-tolerant quantum computing.
 
-{% include figure.liquid
-  path="assets/img/ftqccompiler/fig 1 a.jpg"
-  title="Figure 1(a)"
-  caption="Figure 1(a). Overview of the fault-tolerant architecture proposed by Hangleiter et al. Logical operations are implemented through transversal gates and atom rearrangements on neutral-atom hardware."
-  class="img-fluid rounded z-depth-1"
-  zoomable=true %}
-
 This raises a natural question: if universal fault-tolerant quantum computing remains so difficult, can meaningful quantum advantage still be achieved before reaching that stage?
 
 This question lies at the heart of recent work by Dominik Hangleiter and collaborators. Instead of pursuing arbitrary quantum computation, the paper asks a different question:
@@ -157,7 +150,12 @@ Surprisingly, the answer may be:
 This is one of the central conceptual ideas behind the paper.
 
 Instead of building the most powerful possible quantum computer, one may instead search for a restricted type of quantum computation that remains difficult for classical computers to simulate.
-
+{% include figure.liquid
+  path="assets/img/ftqccompiler/fig 1 a.jpg"
+  title="Figure 1(a)"
+  caption="Figure 1(a). Overview of the fault-tolerant architecture proposed by Hangleiter et al. Logical operations are implemented through transversal gates and atom rearrangements on neutral-atom hardware."
+  class="img-fluid rounded z-depth-1"
+  zoomable=true %}
 This is where **IQP circuits** enter the story.
 
 IQP stands for:
