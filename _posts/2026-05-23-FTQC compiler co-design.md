@@ -13,11 +13,33 @@ distill_wave_viz: true
 ---
 
 
-Quantum computers promise something extraordinary: for certain problems, they may eventually outperform even the best classical supercomputers. At first sight, the path forward sounds simple—build more qubits. The real challenge, however, is not qubit count but noise.
+Quantum computers promise something extraordinary. For certain problems, they may eventually outperform even the best classical supercomputers. At first sight, this sounds simple:
 
-Quantum systems are fragile. Imperfect gates, unwanted interactions, and decoherence slowly destroy computation. In an ideal world, a quantum state evolves as $|\psi\rangle \rightarrow U|\psi\rangle$, where $U$ represents the intended evolution. Reality is less forgiving: $|\psi\rangle \rightarrow \mathcal{E}(U|\psi\rangle)$, where $\mathcal{E}$ represents unwanted noise.
+**build more qubits.**
 
-Small imperfections accumulate quickly as circuits become deeper. Current quantum processors typically operate near error rates of $10^{-3}$, roughly one faulty operation in every thousand. By contrast, scalable fault-tolerant quantum computing may require effective error rates closer to $10^{-10}$. The gap is enormous: $\frac{10^{-3}}{10^{-10}} = 10^7$. In other words, we are still millions of times away from large-scale fault-tolerant quantum computing.
+The real challenge, however, is not the number of qubits. It is **noise**.
+
+Quantum systems are fragile. Imperfect gates, unwanted interactions, and decoherence slowly destroy computation. In an ideal world, a quantum state evolves as
+
+$$
+|\psi\rangle \rightarrow U|\psi\rangle
+$$
+
+where $U$ represents the intended evolution. Reality is less forgiving:
+
+$$
+|\psi\rangle \rightarrow \mathcal{E}(U|\psi\rangle),
+$$
+
+where $\mathcal{E}$ represents unwanted noise.
+
+Small imperfections accumulate quickly as circuits become deeper. Current quantum processors typically operate near error rates of $10^{-3}$, roughly one faulty operation in every thousand. By contrast, scalable fault-tolerant quantum computing may require effective error rates closer to $10^{-10}$. The gap is enormous:
+
+$$
+\frac{10^{-3}}{10^{-10}} = 10^7.
+$$
+
+In other words, we are still millions of times away from large-scale fault-tolerant quantum computing.
 
 {% include figure.liquid
   path="assets/img/ftqccompiler/fig 1 a.jpg"
