@@ -59,9 +59,12 @@ $$
 
 In other words, we are still millions of times away from large-scale fault-tolerant quantum computing.
 
-![Figure 1(a)](/assets/images/figure1a.png)
-
-*Figure 1(a). Overview of the fault-tolerant architecture proposed by Hangleiter et al. Logical operations are implemented through transversal gates and atom rearrangements on neutral-atom hardware.*
+{% include figure.liquid
+  path="assets/img/ftqccompiler/fig 1 a.jpg"
+  title="Figure 1(a)"
+  caption="Figure 1(a). Overview of the fault-tolerant architecture proposed by Hangleiter et al. Logical operations are implemented through transversal gates and atom rearrangements on neutral-atom hardware."
+  class="img-fluid rounded z-depth-1"
+  zoomable=true %}
 
 This raises a natural question: if universal fault-tolerant quantum computing remains so difficult, can meaningful quantum advantage still be achieved before reaching that stage?
 
@@ -298,9 +301,12 @@ This is precisely why IQP circuits became attractive candidates for quantum adva
 
 They are restricted enough to be experimentally realistic, yet still appear difficult for classical computers to simulate.
 
-![Figure 3(a)](/assets/images/figure3a.png)
-
-*Figure 3(a). Example of a hypercube IQP (hIQP) circuit. Logical in-block operations combine with transversal interblock interactions to realize fault-tolerant sampling circuits.*
+{% include figure.liquid
+  path="assets/img/ftqccompiler/fig 3 a.jpg"
+  title="Figure 3(a)"
+  caption="Figure 3(a). Example of a hypercube IQP (hIQP) circuit. Logical in-block operations combine with transversal interblock interactions to realize fault-tolerant sampling circuits."
+  class="img-fluid rounded z-depth-1"
+  zoomable=true %}
 
 For the authors of this paper, IQP circuits represent an attractive middle ground.
 
@@ -360,9 +366,12 @@ $$
 
 This makes the geometry unusually efficient. Instead of information spreading slowly across long chains of local interactions, the hypercube allows information to move rapidly while still maintaining realistic connectivity. In practice, this means complex interactions can emerge without requiring physically unrealistic all-to-all communication.
 
-![Figure 1(d)](/assets/images/figure1d.png)
-
-*Figure 1(d). Visualization of the $[[8,3,2]]$ hypercube code represented geometrically as a cube. Adapted from Hangleiter et al. (2025).*
+{% include figure.liquid
+  path="assets/img/ftqccompiler/fig 1 d.png"
+  title="Figure 1(d)"
+  caption="Figure 1(d). Visualization of the $[[8,3,2]]$ hypercube code represented geometrically as a cube. Adapted from Hangleiter et al. (2025)."
+  class="img-fluid rounded z-depth-1"
+  zoomable=true %}
 
 The geometry becomes even more interesting once combined with quantum error correction. The paper studies a family of quantum codes written as
 
@@ -438,9 +447,12 @@ $$
 
 The picture is intentionally simplified, but the basic intuition is important. A local error remains local. Since quantum error-correcting codes are designed to tolerate a limited number of local errors, preventing uncontrolled propagation becomes essential.
 
-![Figure 2(e)](/assets/images/figure2e.png)
-
-*Figure 2(e). Example of a transversal logical operation where interactions remain localized across encoded qubits. Adapted from Hangleiter et al. (2025).*
+{% include figure.liquid
+  path="assets/img/ftqccompiler/fig 2 e.png"
+  title="Figure 2(e)"
+  caption="Figure 2(e). Example of a transversal logical operation where interactions remain localized across encoded qubits. Adapted from Hangleiter et al. (2025)."
+  class="img-fluid rounded z-depth-1"
+  zoomable=true %}
 
 This is one of the reasons the hypercube code becomes attractive in the first place. The restricted operations needed for IQP circuits naturally fit the transversal and permutation gate structure supported by the code. Instead of fighting against fault tolerance, the computation becomes aligned with it.
 
@@ -467,9 +479,12 @@ The authors take a surprisingly different approach. Instead of moving informatio
 
 Rather than forcing distant qubits to communicate indirectly, the processor rearranges atoms so that desired interactions become local. In effect, geometry itself becomes programmable.
 
-![Figure 2(c)](/assets/images/figure2c.png)
-
-*Figure 2(c). Permutation operations implemented through atom rearrangement. Adapted from Hangleiter et al. (2025).*
+{% include figure.liquid
+  path="assets/img/ftqccompiler/fig 2 c.jpg"
+  title="Figure 2(c)"
+  caption="Figure 2(c). Permutation operations implemented through atom rearrangement. Adapted from Hangleiter et al. (2025)."
+  class="img-fluid rounded z-depth-1"
+  zoomable=true %}
 
 This idea appears through **permutations**, which simply rearrange positions. For example,
 
@@ -525,9 +540,12 @@ The important question of the paper is therefore not whether IQP circuits are ha
 
 The authors provide strong evidence that the answer is yes. Even after introducing fault-tolerant encoding, hypercube geometry, transversal gates, and permutation operations, the resulting sampling problem still appears computationally difficult for classical computers, even at relatively low circuit depths.
 
-![Figure 6](/assets/images/figure6.png)
-
-*Figure 6. Evidence that hIQP circuits retain computational complexity even after fault-tolerant compilation. Adapted from Hangleiter et al. (2025).*
+{% include figure.liquid
+  path="assets/img/ftqccompiler/fig 6.png"
+  title="Figure 6"
+  caption="Figure 6. Evidence that hIQP circuits retain computational complexity even after fault-tolerant compilation. Adapted from Hangleiter et al. (2025)."
+  class="img-fluid rounded z-depth-1"
+  zoomable=true %}
 
 This balance becomes one of the deepest achievements of the proposal. The circuits become easier for realistic hardware to implement without becoming easy for classical computers to imitate. In some sense, the paper is trying to balance two competing goals:
 
