@@ -627,3 +627,8 @@ More broadly, the work hints at an important shift in thinking. The future of sc
 In that sense, the deepest contribution of this work may not simply be a new sampling architecture.
 
 It may be a new way of thinking about quantum computation itself.
+
+### ***References***
+Hangleiter, D. et al. Fault-Tolerant Compiling of Classically Hard Instantaneous Quantum Polynomial Circuits on Hypercubes. PRX Quantum 6, 020338 (2025).
+https://doi.org/10.1103/PRXQuantum.6.020338
+
