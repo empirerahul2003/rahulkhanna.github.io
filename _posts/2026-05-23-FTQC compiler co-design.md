@@ -13,51 +13,11 @@ distill_wave_viz: true
 ---
 
 
-Quantum computers promise something extraordinary. For certain problems, they may eventually outperform even the best classical supercomputers. At first sight, this sounds simple:
+Quantum computers promise something extraordinary: for certain problems, they may eventually outperform even the best classical supercomputers. At first sight, the path forward sounds simple—build more qubits. The real challenge, however, is not qubit count but noise.
 
-**build more qubits.**
+Quantum systems are fragile. Imperfect gates, unwanted interactions, and decoherence slowly destroy computation. In an ideal world, a quantum state evolves as $|\psi\rangle \rightarrow U|\psi\rangle$, where $U$ represents the intended evolution. Reality is less forgiving: $|\psi\rangle \rightarrow \mathcal{E}(U|\psi\rangle)$, where $\mathcal{E}$ represents unwanted noise.
 
-The real challenge, however, is not the number of qubits.
-
-It is **noise**.
-
-Quantum systems are fragile. Imperfect gates, unwanted interactions, and decoherence slowly destroy computation. In an ideal world, a quantum state evolves as
-
-$$
-|\psi\rangle \rightarrow U|\psi\rangle
-$$
-
-where $U$ represents the intended evolution.
-
-Reality is less forgiving:
-
-$$
-|\psi\rangle \rightarrow \mathcal{E}(U|\psi\rangle),
-$$
-
-where $\mathcal{E}$ represents unwanted noise.
-
-Small imperfections accumulate quickly as circuits become deeper. Current quantum processors typically operate near error rates of
-
-$$
-10^{-3},
-$$
-
-roughly one faulty operation in every thousand. By contrast, scalable fault-tolerant quantum computing may require effective error rates closer to
-
-$$
-10^{-10}.
-$$
-
-The gap is enormous:
-
-$$
-\frac{10^{-3}}{10^{-10}}
-=
-10^7.
-$$
-
-In other words, we are still millions of times away from large-scale fault-tolerant quantum computing.
+Small imperfections accumulate quickly as circuits become deeper. Current quantum processors typically operate near error rates of $10^{-3}$, roughly one faulty operation in every thousand. By contrast, scalable fault-tolerant quantum computing may require effective error rates closer to $10^{-10}$. The gap is enormous: $\frac{10^{-3}}{10^{-10}} = 10^7$. In other words, we are still millions of times away from large-scale fault-tolerant quantum computing.
 
 {% include figure.liquid
   path="assets/img/ftqccompiler/fig 1 a.jpg"
@@ -447,12 +407,16 @@ $$
 
 The picture is intentionally simplified, but the basic intuition is important. A local error remains local. Since quantum error-correcting codes are designed to tolerate a limited number of local errors, preventing uncontrolled propagation becomes essential.
 
-{% include figure.liquid
-  path="assets/img/ftqccompiler/fig 2 e.png"
-  title="Figure 2(e)"
-  caption="Figure 2(e). Example of a transversal logical operation where interactions remain localized across encoded qubits. Adapted from Hangleiter et al. (2025)."
-  class="img-fluid rounded z-depth-1"
-  zoomable=true %}
+<div class="row justify-content-sm-center">
+  <div class="col-sm-7 mt-3 mt-md-0">
+    {% include figure.liquid
+      path="assets/img/ftqccompiler/fig 2 e.png"
+      title="Figure 2(e)"
+      caption="Figure 2(e). Example of a transversal logical operation where interactions remain localized across encoded qubits. Adapted from Hangleiter et al. (2025)."
+      class="img-fluid rounded z-depth-1"
+      zoomable=true %}
+  </div>
+</div>
 
 This is one of the reasons the hypercube code becomes attractive in the first place. The restricted operations needed for IQP circuits naturally fit the transversal and permutation gate structure supported by the code. Instead of fighting against fault tolerance, the computation becomes aligned with it.
 
@@ -479,12 +443,16 @@ The authors take a surprisingly different approach. Instead of moving informatio
 
 Rather than forcing distant qubits to communicate indirectly, the processor rearranges atoms so that desired interactions become local. In effect, geometry itself becomes programmable.
 
-{% include figure.liquid
-  path="assets/img/ftqccompiler/fig 2 c.jpg"
-  title="Figure 2(c)"
-  caption="Figure 2(c). Permutation operations implemented through atom rearrangement. Adapted from Hangleiter et al. (2025)."
-  class="img-fluid rounded z-depth-1"
-  zoomable=true %}
+<div class="row justify-content-sm-center">
+  <div class="col-sm-7 mt-3 mt-md-0">
+    {% include figure.liquid
+      path="assets/img/ftqccompiler/fig 2 c.jpg"
+      title="Figure 2(c)"
+      caption="Figure 2(c). Permutation operations implemented through atom rearrangement. Adapted from Hangleiter et al. (2025)."
+      class="img-fluid rounded z-depth-1"
+      zoomable=true %}
+  </div>
+</div>
 
 This idea appears through **permutations**, which simply rearrange positions. For example,
 
@@ -618,10 +586,6 @@ The statistical mechanics framework provides evidence that hypercube IQP circuit
 
 The paper also studies **Bell sampling** for degree-4 IQP circuits and argues that this restricted setting remains classically intractable while still allowing efficient validation. This becomes important for scalability because it suggests that fault-tolerant quantum sampling may remain both computationally interesting and experimentally testable.
 
-![Statistical Modeling Figure](/assets/images/statistical_modeling.png)
-
-*Figure X. Statistical mechanics analysis of second-moment properties used to study scrambling and hardness in hypercube IQP circuits. Adapted from Hangleiter et al. (2025).*
-
 At this point, one final challenge remains.
 
 If these circuits are genuinely hard to simulate classically, how can we verify that a quantum device is actually performing the intended computation?
@@ -648,10 +612,6 @@ $$
 where increasing the distance $d$ improves error suppression while preserving transversal IQP sampling.
 
 The important point is that the proposal is not merely a proof-of-principle experiment. It sketches a path toward scalable fault-tolerant quantum sampling where computational hardness and experimental realism continue to coexist.
-
-![XEB and Scalability Figure](/assets/images/xeb_scalability.png)
-
-*Figure X. XEB benchmarking and scalable code constructions under different noise regimes. Adapted from Hangleiter et al. (2025).*
 
 Stepping back, the broader goal of the paper becomes clear: not simply protecting quantum systems from noise, but identifying computationally hard tasks that can realistically survive fault tolerance.
 
