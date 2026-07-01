@@ -67,7 +67,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/rahulkhanna.github.io/blog/2026/magic-of-fourier-series/";
+            window.location.href = "/rahulkhanna.github.io/blog/2025/magic-of-fourier-series/";
           
         },
       },{id: "books-the-godfather",
