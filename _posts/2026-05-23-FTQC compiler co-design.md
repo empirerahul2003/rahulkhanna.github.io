@@ -5,7 +5,7 @@ description: >
   Fault-Tolerant Compiling of Classically Hard Instantaneous Quantum
   Polynomial Circuits on Hypercubes
 tags: IQP quantum architecrure physics math
-date: 2026-05-13
+date: 2026-05-23
 featured: true
 giscus_comments: false
 related_posts: false

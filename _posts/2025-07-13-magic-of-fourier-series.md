@@ -5,7 +5,7 @@ description: >
   How waves, interference, and harmonics combine to explain
   the mathematics of Fourier series.
 tags: fourier-analysis signal-processing physics math
-date: 2026-05-13
+date: 2025-07-13
 featured: true
 giscus_comments: false
 related_posts: false
