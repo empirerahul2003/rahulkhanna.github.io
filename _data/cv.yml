@@ -14,7 +14,7 @@ cv:
     - network: LinkedIn
       username: rahulkumar077
   address:
-    street: ..
+    street:
     city: Dalhousie
     region: Himachal Pradesh
     postalCode: 176303
