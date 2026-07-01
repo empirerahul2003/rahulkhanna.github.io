@@ -45,7 +45,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/rahulkhanna.github.io/blog/2026/FTQC-compiler-co-design/";
+            window.location.href = "/rahulkhanna.github.io/ftqc/";
           
         },
       },{id: "post-p-vs-np",
