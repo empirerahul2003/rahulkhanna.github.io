@@ -1,6 +1,7 @@
 ---
 layout: distill
 title: FTQC complier co-design
+permalink: /ftqc/
 description: >
   Fault-Tolerant Compiling of Classically Hard Instantaneous Quantum
   Polynomial Circuits on Hypercubes
